@@ -14,12 +14,24 @@ schematized_where = ->(select,from,where){
   }
 }
 
-parameterized_select = ->(from,where){
+from_where = ->(from,where){
   ->(select){ 
     ->(schema){ 
       "SELECT '" + schema + "' AS schema, " + select +
       "  FROM " + schema + "." + from + 
       " WHERE " + where 
+    }
+  }
+}
+
+from = ->(from){
+  ->(where) {
+    ->(select){ 
+      ->(schema){ 
+        "SELECT '" + schema + "' AS schema, " + select +
+        "  FROM " + schema + "." + from + 
+        " WHERE " + where 
+      }
     }
   }
 }
@@ -32,7 +44,7 @@ union2 = ->(schf){
   }
 }
 
-set_params = ->(query,limit,offset,orderby) {
+set_window = ->(query,limit,offset,orderby) {
   query + " ORDER BY " + orderby + " LIMIT " + limit + " OFFSET " + offset 
 }
 
@@ -40,30 +52,35 @@ set_params = ->(query,limit,offset,orderby) {
 
 # <example usages>
 
-kernel = parameterized_select.
+kernel = from.
   call(
        "   project " + 
        "INNER JOIN person manager " + 
        "        ON project.manager_id = manager.person_id " +
        "INNER JOIN location " + 
-       "        ON location.location_id = project.location_id",
+       "        ON location.location_id = project.location_id"
+       )
+
+kernel_with_where = kernel.
+  call(
        "project.created_on > '2009-08-01'"
        )
 
-kernel_with_select = kernel.
+kernel_with_select = kernel_with_where.
   call(
        "project_id,project.name,created_on, " + 
        "manager.name, " + 
        "location.street_number || ' ' || location.street AS address"
        )
 
-my_query = set_params.
-  call(union2.call(kernel_with_select).
-       call("software",
-            "finance"),
-       "20",
-       "10",
-       "created_on DESC")
+kernel_union = union2.call(kernel_with_select).
+  call("software",
+       "finance")
+
+my_query = set_window.call(kernel_union,
+                           "20",
+                           "10",
+                           "created_on DESC")
 
 # </example usages>
   
