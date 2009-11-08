@@ -17,13 +17,14 @@ class BusinessUnitController < ApplicationController
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
 
-    @sql = "SELECT * FROM business_units INNER JOIN people ON (true)"
+    @kernel = "business_units INNER JOIN people ON (true)"
+
+    @sql = "SELECT * FROM " + @kernel
 
     @count_sql = "SELECT count(*) FROM (" + @sql + ") AS count"
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
 
     xml.business_units(:sql => @sql,:count => @count) {
-
 
       @results = ActiveRecord::Base.connection.execute(@sql)
       @results.each do |r| 

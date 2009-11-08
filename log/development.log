@@ -6559,3 +6559,35 @@ Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:13:53) [G
   [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
   [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
 Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:14:30) [GET]
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:14:36) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 32ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:14:38) [GET]
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:14:38) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
