@@ -16,17 +16,28 @@ class BusinessUnitController < ApplicationController
   def index
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
-    xml.business_units {
-      @units = BusinessUnit.find(:all)
 
-      @units.each do |u|
+    @sql = "SELECT id,name,address,created_at FROM business_units"
+    @count_sql = "SELECT count(*) FROM (" + @sql + ") AS count"
+
+    @results = ActiveRecord::Base.connection.execute(@count_sql)
+    @count = @results[0]['count']
+
+    xml.business_units(:sql => @sql,:count => @count) {
+
+
+      @results = ActiveRecord::Base.connection.execute(@sql)
+      @results.each do |r| 
         xml.business_unit(
-                          :id => u.attributes["id"],
-                          :name => u.attributes["name"],
-                          :address => u.attributes["address"]
+                          :name => r["name"],
+                          :address => r["address"],
+                          :id => r["id"],
+                          :created_at => r["created_at"]
                           )
       end
     }
+
+
 
     if self.params["format"] == "xml"
       render :xml => @xml

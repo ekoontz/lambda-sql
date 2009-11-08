@@ -5173,3 +5173,1288 @@ Completed in 32ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit]
 Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:20:45) [GET]
   [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
 Completed in 44ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:26:57) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:26:58) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:27:34) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:27:35) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:27:51) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 84ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:27:56) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 68ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:28:12) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:28:18) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:28:38) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 64ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:29:19) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:29:19) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:29:25) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 48ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:29:34) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:29:45) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:30:31) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:30:42) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:32:05) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:32:06) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:32:24) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:32:29) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (32.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:32:29) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 96ms (View: 16, DB: 40) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:32:40) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:34:03) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:34:29) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:35:35) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 44ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:35:56) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 84ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:36:05) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:36:16) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:36:41) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:36:52) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:00) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 52ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:00) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:12) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:13) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:30) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:35) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 52ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:46) [GET]
+  [4;35;1mBusinessUnit Load (12.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 48ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:37:47) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:38:13) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:38:29) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:39:40) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:39:41) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:39:47) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:40:02) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:40:14) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 44ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:40:39) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:40:40) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:41:07) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:41:13) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:41:32) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:41:37) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:41:46) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:06) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 88ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:13) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 48ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:23) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:26) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:42) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:45) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:42:46) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:01) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:02) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:10) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:10) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:22) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:23) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:30) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:43:36) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:44:03) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 40ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:44:03) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 80ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:44:32) [GET]
+  [4;36;1mBusinessUnit Load (4.0ms)[0m   [0;1mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 12:44:43) [GET]
+  [4;35;1mBusinessUnit Load (4.0ms)[0m   [0mSELECT * FROM "business_units" [0m
+Completed in 36ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:48:25) [GET]
+
+NoMethodError (undefined method `ILIKE' for #<BusinessUnitController:0xb73eeccc>):
+  app/controllers/business_unit_controller.rb:21:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:48:39) [GET]
+
+ArgumentError (too few arguments):
+  app/controllers/business_unit_controller.rb:20:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:48:48) [GET]
+
+ArgumentError (too few arguments):
+  app/controllers/business_unit_controller.rb:20:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (72.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:48:59) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE 'software') [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:48:59) [GET]
+  [4;35;1mBusinessUnit Load (12.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE 'software') [0m
+Completed in 36ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:49:10) [GET]
+
+ArgumentError (too few arguments):
+  app/controllers/business_unit_controller.rb:20:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (124.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:49:31) [GET]
+
+ArgumentError (too few arguments):
+  app/controllers/business_unit_controller.rb:20:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:49:46) [GET]
+
+ArgumentError (too few arguments):
+  app/controllers/business_unit_controller.rb:20:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:50:00) [GET]
+
+ArgumentError (too few arguments):
+  app/controllers/business_unit_controller.rb:20:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (84.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:50:47) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'software') [0m
+Completed in 32ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:50:48) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE E'software') [0m
+Completed in 32ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:50:59) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%software') [0m
+Completed in 28ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:51:00) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE E'%software') [0m
+Completed in 32ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:51:07) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%software%') [0m
+Completed in 36ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:51:07) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE E'%software%') [0m
+Completed in 40ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:51:12) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+Completed in 40ms (View: 8, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:51:33) [GET]
+  [4;35;1mBusinessUnit Load (12.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+Completed in 36ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:53:51) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+Completed in 36ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:53:52) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+Completed in 32ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:54:37) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+Completed in 36ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:54:37) [GET]
+  [4;35;1mBusinessUnit Load (8.0ms)[0m   [0mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:57:15) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect * from people[0m
+
+NoMethodError (undefined method `fetch_row' for #<PGresult:0xb72e6de8>):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:57:55) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect * from people[0m
+
+NoMethodError (undefined method `fetch_row' for #<PGresult:0xb7b5e9bc>):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:58:13) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: relation "peopxxle" does not exist
+: select * from peopxxle[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  relation "peopxxle" does not exist
+: select * from peopxxle):
+  app/controllers/business_unit_controller.rb:34:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:58:27) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT * FROM people[0m
+
+NoMethodError (undefined method `fetch_row' for #<PGresult:0xb799b3dc>):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:59:27) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM people[0m
+
+NoMethodError (undefined method `result' for #<PGresult:0xb756c3d8>):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 12:59:43) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM people[0m
+
+NoMethodError (undefined method `result' for #<PGresult:0xb733ed90>):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (60.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:00:27) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT * FROM people[0m
+Completed in 40ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:00:28) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM people[0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:00:57) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM people[0m
+Completed in 40ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:00:57) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM people[0m
+Completed in 32ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:01:42) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 32ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:01:52) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 32ms (View: 0, DB: 20) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:02:10) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+
+NameError (undefined local variable or method `u' for #<BusinessUnitController:0xb7390cd0>):
+  app/controllers/business_unit_controller.rb:37:in `index'
+  app/controllers/business_unit_controller.rb:35:in `each'
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:02:15) [GET]
+  [4;36;1mBusinessUnit Load (12.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+
+NoMethodError (undefined method `attributes' for #<Hash:0xb789e4e8>):
+  app/controllers/business_unit_controller.rb:37:in `index'
+  app/controllers/business_unit_controller.rb:35:in `each'
+  app/controllers/business_unit_controller.rb:35:in `index'
+  app/controllers/business_unit_controller.rb:33:in `index'
+  app/controllers/business_unit_controller.rb:19:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (120.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:02:29) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 36ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:02:29) [GET]
+  [4;36;1mBusinessUnit Load (8.0ms)[0m   [0;1mSELECT * FROM "business_units" WHERE (name ILIKE E'%soft%') [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 36ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:02:55) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT * FROM business_units[0m
+Completed in 16ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:02:55) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 16ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:03:08) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT * FROM business_units[0m
+Completed in 12ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:03:29) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:03:34) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT * FROM business_units[0m
+Completed in 12ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:03:34) [GET]
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:03:47) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT * FROM business_units[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:03:48) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 16ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:03:53) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT * FROM business_units[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:03:59) [GET]
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units[0m
+Completed in 16ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:04:04) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT id,name,address FROM business_units[0m
+Completed in 16ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:04:19) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT id,name,address FROM business_units[0m
+Completed in 12ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:04:20) [GET]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT id,name,address FROM business_units[0m
+Completed in 16ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:04:20) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT id,name,address FROM business_units[0m
+Completed in 16ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:04:35) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:04:35) [GET]
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 4) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:04:41) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 12ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:04:42) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:06:43) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:06:44) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 12ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:07:15) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:07:15) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:07:57) [GET]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 24ms (View: 4, DB: 4) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:07:57) [GET]
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:08:48) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+
+IndexError (Index 1 is out of range):
+  app/controllers/business_unit_controller.rb:24:in `[]'
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:08:53) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:08:54) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:09:26) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: subquery in FROM must have an alias
+HINT: For example, FROM (SELECT ...) [AS] foo.
+: SELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units)[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  subquery in FROM must have an alias
+HINT:  For example, FROM (SELECT ...) [AS] foo.
+: SELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units)):
+  app/controllers/business_unit_controller.rb:23:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:09:32) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:09:32) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]

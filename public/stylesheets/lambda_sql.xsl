@@ -88,7 +88,7 @@
   </xsl:template>
 
   <xsl:template match="*" mode="tbody">
-    <tr>
+    <tr class="row_{position() mod 2}">
       <th><xsl:value-of select="position()"/></th>
       <xsl:apply-templates select="@*" mode="td"/>
     </tr>

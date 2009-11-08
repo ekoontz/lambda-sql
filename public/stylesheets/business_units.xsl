@@ -22,5 +22,8 @@
     <xsl:apply-templates select="." mode="table"/>
   </xsl:template>
 
+  <xsl:template match="@id" mode="th"/>
+  <xsl:template match="@id" mode="td"/>
+  
 </xsl:stylesheet>
   

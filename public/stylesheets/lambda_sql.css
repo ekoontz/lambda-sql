@@ -12,5 +12,35 @@ div {
     background: #00ee99;
     border:1px solid black;
     margin:0.25em;
-    padding:0.5em;
+    padding:0.75em;
 }
+
+h2 {
+    float:right;
+    width:auto;
+    padding:0.25em;
+    margin:0;
+}
+
+table {
+    border-collapse:collapse;
+    border:1px solid black;
+}
+
+thead tr {
+    border-bottom:1px solid black;
+}
+
+thead th {
+    background: #00ffff;
+    border-bottom:1px solid black;
+}
+
+tr.row_0 {
+    background: #00ffff;
+}
+
+tr.row_1 {
+    background: #ffffff;
+}
+
