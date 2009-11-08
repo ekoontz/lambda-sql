@@ -6458,3 +6458,104 @@ Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:09
   [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
   [4;35;1mSQL (4.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
 Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index to xml (for 10.0.2.2 at 2009-11-08 13:11:29) [GET]
+
+SyntaxError (/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:24: syntax error, unexpected '['
+...nnection.execute(@count_sql).[0]['count']
+                              ^
+/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:24: syntax error, unexpected ']', expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:11:44) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:11:45) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT id,name,address,created_at FROM business_units) AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT id,name,address,created_at FROM business_units[0m
+Completed in 16ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:12:59) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: syntax error at or near ")"
+LINE 1: ...OM (SELECT * FROM business_units INNER JOIN people) AS count
+ ^
+: SELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people) AS count[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  syntax error at or near ")"
+LINE 1: ...OM (SELECT * FROM business_units INNER JOIN people) AS count
+                                                             ^
+: SELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people) AS count):
+  app/controllers/business_unit_controller.rb:23:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:13:12) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:13:12) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:13:43) [GET]
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 13:13:53) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
