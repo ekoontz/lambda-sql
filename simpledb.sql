@@ -1,24 +1,24 @@
 BEGIN TRANSACTION;
 
-CREATE TABLE contact (
-       contact_id SERIAL PRIMARY KEY,
-       name TEXT
+CREATE TABLE person (
+       person_id SERIAL PRIMARY KEY,
+       name TEXT,
+       address TEXT
 );
 
-CREATE TABLE location (
-       location_id SERIAL PRIMARY KEY,
-       street_number TEXT,
-       street TEXT
+CREATE TABLE business_unit (
+       business_unit_id SERIAL PRIMARY KEY,
+       name,
+       address TEXT
 );
-
 
 CREATE SCHEMA finance;
 
 CREATE TABLE finance.project (
        name TEXT,
        project_id SERIAL,
-       location_id INTEGER REFERENCES location(location_id),
-       manager_id INTEGER REFERENCES contact(contact_id)      
+       business_unit_id INTEGER REFERENCES business_unit(business_unit_id),
+       manager_id INTEGER REFERENCES person(person_id)      
 );	  	     
 
 CREATE SCHEMA software;
@@ -26,8 +26,8 @@ CREATE SCHEMA software;
 CREATE TABLE software.project (
        name TEXT,
        project_id SERIAL,
-       location_id INTEGER REFERENCES location(location_id),
-       manager_id INTEGER REFERENCES contact(contact_id)      
+       business_unit_id INTEGER REFERENCES business_unit(business_unit_id),
+       manager_id INTEGER REFERENCES person(person_id)      
 );
 
 END TRANSACTION;

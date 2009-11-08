@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  business_unit_id: 1
+  manager_unit_id: 1
+
+two:
+  name: MyString
+  business_unit_id: 1
+  manager_unit_id: 1

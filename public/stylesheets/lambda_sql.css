@@ -1,0 +1,16 @@
+body {
+    background:white;
+    font-family:sans-serif;
+}
+
+a {
+    padding-left:0.5em;
+    padding-right:0.5em;
+}
+
+div {
+    background: #00ee99;
+    border:1px solid black;
+    margin:0.25em;
+    padding:0.5em;
+}

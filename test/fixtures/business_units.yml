@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Software
+  address: 123 Main St
+
+two:
+  name: Finance
+  address: 456 Park Ave
