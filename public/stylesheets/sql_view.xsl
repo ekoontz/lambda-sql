@@ -27,19 +27,9 @@
 	<table>
 	  <tr>
 	    <td>
-	      <select name="table">
-		<option>
-		  <xsl:if test="params/@table = 'business_units'">
-		    <xsl:attribute name="selected">selected</xsl:attribute>
-		  </xsl:if>
-		    business_units
-		  </option>
-		<option>
-		  <xsl:if test="params/@table = 'people'">
-		    <xsl:attribute name="selected">selected</xsl:attribute>
-		  </xsl:if>
-		  people</option>
-	      </select>
+	      <xsl:apply-templates select="metadata/tables" mode="dropdown">
+		<xsl:with-param name="name" select="'table'"/>
+	      </xsl:apply-templates>
 	    </td>
 	    <td>join on:</td>
 	    <td>
@@ -66,7 +56,6 @@
       </div>
     </form>
 
-
     <h3>Current SQL View:</h3>
     <div>
       <div class="pre">
@@ -75,9 +64,35 @@
       
       <xsl:apply-templates select="rows" mode="table"/>
     </div>
-
-
   </xsl:template>
+
+  <xsl:template match="tables" mode="dropdown">
+    <xsl:param name="name"/>
+    <select name="{$name}">
+      <xsl:apply-templates select="table" mode="option"/>
+      <option>
+	<xsl:if test="params/@table = 'business_units'">
+	  <xsl:attribute name="selected">selected</xsl:attribute>
+	</xsl:if>
+	business_units
+      </option>
+      <option>
+	<xsl:if test="params/@table = 'people'">
+	  <xsl:attribute name="selected">selected</xsl:attribute>
+		  </xsl:if>
+	people</option>
+    </select>
+  </xsl:template>
+
+  <xsl:template match="table" mode="option">
+    <option>
+      <xsl:if test="ancestor::view/params/@table = @tablename">
+	<xsl:attribute name="selected">selected</xsl:attribute>
+      </xsl:if>
+      <xsl:value-of select="@tablename"/>
+    </option>
+  </xsl:template>
+
 
 </xsl:stylesheet>
   

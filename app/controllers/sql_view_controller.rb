@@ -23,8 +23,7 @@ class SqlViewController < ApplicationController
   def delete
   end
 
-  def index
-    
+  def query(kernel)
     @from = lambda{|from|
       lambda{|where|
         lambda{|select|
@@ -37,6 +36,39 @@ class SqlViewController < ApplicationController
 
     @table = self.params["table"]
 
+    @kernel = kernel
+
+    @kernel_with_where = @kernel.
+      call(
+           "true"
+           )
+
+    @kernel_with_select = @kernel_with_where.
+      call(
+           "*"
+           )
+
+    @sql = @kernel_with_select
+    
+    @count_sql = "SELECT count(*) FROM (" + @kernel_with_where.call("1") + ") AS count"
+    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
+
+
+  end
+
+  def index
+
+    @from = lambda{|from|
+      lambda{|where|
+        lambda{|select|
+          "SELECT " + select +
+          "  FROM " + from + 
+          " WHERE " + where 
+        }
+      }
+    }
+
+    @table = self.params["table"]
 
     if (self.params["join1"] != '')
       @kernel = @from.
@@ -49,7 +81,6 @@ class SqlViewController < ApplicationController
              @table
              )
     end
-      
 
     @kernel_with_where = @kernel.
       call(
@@ -69,7 +100,23 @@ class SqlViewController < ApplicationController
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
     xml.view {
+
+      xml.metadata {
+        tables_query_kernel = @from.call("pg_tables").call("schemaname='public'")
+        tables_sql = tables_query_kernel.call("*")
+        tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
+        tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
+
+        xml.tables(:sql => tables_sql,:count => tables_count) {
+          @results = ActiveRecord::Base.connection.execute(tables_sql)
+          @results.each do |r| 
+            xml.table(r)
+          end
+        }
+      }
+
       xml.params(self.params)
+
       xml.rows(:sql => @sql,:count => @count) {
         @results = ActiveRecord::Base.connection.execute(@sql)
         @results.each do |r| 
