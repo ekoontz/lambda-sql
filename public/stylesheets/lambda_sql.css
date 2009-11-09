@@ -15,6 +15,12 @@ div {
     padding:0.75em;
 }
 
+div.pre {
+    height:1em;
+    overfloat:scroll;
+    background:#ccc;
+}
+
 h2 {
     float:right;
     width:auto;
@@ -23,6 +29,7 @@ h2 {
 }
 
 table {
+    width:100%;
     border-collapse:collapse;
     border:1px solid black;
 }
@@ -44,3 +51,10 @@ tr.row_1 {
     background: #ffffff;
 }
 
+form table {
+    width:auto;
+}
+
+form td {
+    padding-left:1em;
+}

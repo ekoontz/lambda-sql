@@ -68,7 +68,14 @@
 
 
     <h3>Current SQL View:</h3>
-    <xsl:apply-templates select="rows" mode="table"/>
+    <div>
+      <div class="pre">
+	<xsl:value-of select="rows/@sql"/>
+      </div>
+      
+      <xsl:apply-templates select="rows" mode="table"/>
+    </div>
+
 
   </xsl:template>
 
