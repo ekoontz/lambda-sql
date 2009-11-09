@@ -53,8 +53,9 @@
 
   <xsl:template match="*" mode="header_main">
     <a href="/business_unit">business units</a>
-    <a href="/person">people</a>
-    <a href="/project">projects</a>
+    <a href="/person/">people</a>
+    <a href="/project/">projects</a>
+    <a href="/sql_view/">views</a>
   </xsl:template>
 
   <xsl:template match="*" mode="body">

@@ -15,12 +15,61 @@
 
   <xsl:template match="*" mode="header">
     <xsl:apply-templates select="." mode="header_main"/>
-    <h2>Choose a SQL view to display and edit.</h2>
+    <h2>SQL views</h2>
 
   </xsl:template>
 
-  <xsl:template match="*" mode="body">
-    <h3>Current SQL Views:</h3>
+  <xsl:template match="view" mode="body">
+
+    <h3>Query Controller</h3>
+    <form action="?" method="get">
+      <div>
+	<table>
+	  <tr>
+	    <td>
+	      <select name="table">
+		<option>
+		  <xsl:if test="params/@table = 'business_units'">
+		    <xsl:attribute name="selected">selected</xsl:attribute>
+		  </xsl:if>
+		    business_units
+		  </option>
+		<option>
+		  <xsl:if test="params/@table = 'people'">
+		    <xsl:attribute name="selected">selected</xsl:attribute>
+		  </xsl:if>
+		  people</option>
+	      </select>
+	    </td>
+	    <td>join on:</td>
+	    <td>
+	      <select name="join1">
+		<option/>
+		<option>
+		  <xsl:if test="params/@join1 = 'business_units'">
+		    <xsl:attribute name="selected">selected</xsl:attribute>
+		  </xsl:if>
+		    business_units
+		  </option>
+		<option>
+		  <xsl:if test="params/@join1 = 'people'">
+		    <xsl:attribute name="selected">selected</xsl:attribute>
+		  </xsl:if>
+		  people</option>
+	      </select>
+	    </td>
+	    <td>
+	      <input type="submit"/>
+	    </td>
+	  </tr>
+	</table>
+      </div>
+    </form>
+
+
+    <h3>Current SQL View:</h3>
+    <xsl:apply-templates select="rows" mode="table"/>
+
   </xsl:template>
 
 </xsl:stylesheet>

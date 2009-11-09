@@ -1,6 +1,8 @@
 require 'xml/xslt'
 
 class BusinessUnitController < ApplicationController
+  require 'compose'
+
   def create
   end
 
@@ -14,30 +16,45 @@ class BusinessUnitController < ApplicationController
   end
 
   def index
-    @xml = ""
-    xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
+    @from = lambda{|from|
+      lambda{|where|
+        lambda{|select|
+          "SELECT " + select +
+          "  FROM " + from + 
+          " WHERE " + where 
+        }
+      }
+    }
 
-    @kernel = "business_units INNER JOIN people ON (true)"
+    @kernel = @from.
+      call(
+           "business_units"
+           )
 
-    @sql = "SELECT * FROM " + @kernel
+    @kernel_with_where = @kernel.
+      call(
+           "true"
+           )
 
-    @count_sql = "SELECT count(*) FROM (" + @sql + ") AS count"
+    @kernel_with_select = @kernel_with_where.
+      call(
+           "*"
+           )
+
+    @sql = @kernel_with_select
+
+    @count_sql = "SELECT count(*) FROM (" + @kernel_with_where.call("1") + ") AS count"
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
 
+    @xml = ""
+    xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
     xml.business_units(:sql => @sql,:count => @count) {
 
       @results = ActiveRecord::Base.connection.execute(@sql)
       @results.each do |r| 
-        xml.business_unit(
-                          :name => r["name"],
-                          :address => r["address"],
-                          :id => r["id"],
-                          :created_at => r["created_at"]
-                          )
+        xml.business_unit(r)
       end
     }
-
-
 
     if self.params["format"] == "xml"
       render :xml => @xml

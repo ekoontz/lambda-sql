@@ -6591,3 +6591,1839 @@ Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 13:14
   [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
 Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 14:59:01) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 14:59:02) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 14:59:06) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 14:59:06) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:22:45) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:22:50) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 16ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:22:51) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index to xml (for 10.0.2.2 at 2009-11-08 15:22:58) [GET]
+
+MissingSourceFile (no such file to load -- composex):
+  app/controllers/business_unit_controller.rb:2
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:23:04) [GET]
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 20) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:23:04) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:24:35) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb74851e0>):
+  app/controllers/business_unit_controller.rb:22:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:14) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb72c4ff4>):
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:19) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb7b83ce4>):
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (108.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:25) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb7482e04>):
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:25) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb72cb19c>):
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:26) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb7b6c288>):
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (100.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:50) [GET]
+
+MissingSourceFile (no such file to load -- composex):
+  app/controllers/business_unit_controller.rb:4
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:30:54) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb72c36f4>):
+  app/controllers/business_unit_controller.rb:24:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:31:40) [GET]
+
+NameError (undefined local variable or method `parameterized_select' for #<BusinessUnitController:0xb7b58a1c>):
+  app/controllers/business_unit_controller.rb:23:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index to xml (for 10.0.2.2 at 2009-11-08 15:32:28) [GET]
+
+SyntaxError (/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:23: syntax error, unexpected '>'
+    parameterized_select = ->(from,where){
+                             ^
+/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:23: syntax error, unexpected '{', expecting '='
+/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:24: syntax error, unexpected '{', expecting kEND
+      ->(select){ 
+                 ^
+/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:25: syntax error, unexpected '{', expecting kEND
+        ->(schema){ 
+                   ^
+/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:29: syntax error, unexpected '}', expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:34:01) [GET]
+
+NameError (undefined local variable or method `parameterized_select' for #<BusinessUnitController:0xb72dea44>):
+  app/controllers/business_unit_controller.rb:45:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:34:10) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:34:10) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 64ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:34:32) [GET]
+
+NameError (undefined local variable or method `from' for #<BusinessUnitController:0xb757ab7c>):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:34:46) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.call):
+  app/controllers/business_unit_controller.rb:35:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:35:09) [GET]
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 24ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:35:10) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people ON (true)) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON (true)[0m
+Completed in 20ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index to xml (for 10.0.2.2 at 2009-11-08 15:58:18) [GET]
+
+SyntaxError (/home/ekoontz/lambda-sql/app/controllers/business_unit_controller.rb:28: syntax error, unexpected '}', expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:58:37) [GET]
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil.call):
+  app/controllers/business_unit_controller.rb:36:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 15:58:57) [GET]
+
+TypeError (can't convert Proc into String):
+  app/controllers/business_unit_controller.rb:47:in `+'
+  app/controllers/business_unit_controller.rb:47:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:00:04) [GET]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: missing FROM-clause entry in subquery for table "business_unit"
+LINE 1: ...ER JOIN people manager ON true WHERE business_u...
+ ^
+: SELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_unit.created_on > '2009-08-01') AS count[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  missing FROM-clause entry in subquery for table "business_unit"
+LINE 1: ...ER JOIN people manager             ON true  WHERE business_u...
+                                                             ^
+: SELECT count(*) FROM (SELECT *  FROM business_units     INNER JOIN people manager             ON true  WHERE business_unit.created_on > '2009-08-01') AS count):
+  app/controllers/business_unit_controller.rb:50:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (88.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:00:31) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: column business_units.created_on does not exist
+LINE 1: ...ER JOIN people manager ON true WHERE business_u...
+ ^
+: SELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_on > '2009-08-01') AS count[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  column business_units.created_on does not exist
+LINE 1: ...ER JOIN people manager             ON true  WHERE business_u...
+                                                             ^
+: SELECT count(*) FROM (SELECT *  FROM business_units     INNER JOIN people manager             ON true  WHERE business_units.created_on > '2009-08-01') AS count):
+  app/controllers/business_unit_controller.rb:50:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:00:50) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 28ms (View: 4, DB: 20) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:00:55) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:02:01) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 28ms (View: 0, DB: 20) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:02:02) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:02:29) [GET]
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:02:29) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:03:35) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:03:40) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:03:47) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 64ms (View: 4, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:03:47) [GET]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 36ms (View: 0, DB: 20) | 200 OK [http://localhost/business_unit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:04:54) [GET]
+Completed in 8ms (View: 4, DB: 4) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:04:59) [GET]
+Completed in 12ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#sql_view (for 10.0.2.2 at 2009-11-08 16:05:02) [GET]
+
+ActionController::UnknownAction (No action responded to sql_view. Actions: create, delete, index, read, set_content_type, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#sql_view (for 10.0.2.2 at 2009-11-08 16:05:13) [GET]
+
+ActionController::UnknownAction (No action responded to sql_view. Actions: create, delete, index, read, set_content_type, and update):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:05:39) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:05:39) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:05:41) [GET]
+Completed in 8ms (View: 0, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:05:41) [GET]
+Completed in 12ms (View: 4, DB: 0) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:07:07) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 0, DB: 20) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:07:12) [GET]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 28ms (View: 0, DB: 20) | 200 OK [http://localhost/sql_view/]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:07:16) [GET]
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:07:16) [GET]
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:08:18) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:08:19) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:08:26) [GET]
+  Parameters: {"table"=>"people"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: missing FROM-clause entry in subquery for table "business_units"
+LINE 1: ...ER JOIN people manager ON true WHERE business_u...
+ ^
+: SELECT count(*) FROM (SELECT * FROM people INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  missing FROM-clause entry in subquery for table "business_units"
+LINE 1: ...ER JOIN people manager             ON true  WHERE business_u...
+                                                             ^
+: SELECT count(*) FROM (SELECT *  FROM people    INNER JOIN people manager             ON true  WHERE business_units.created_at > '2009-08-01') AS count):
+  app/controllers/sql_view_controller.rb:60:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:09:13) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:09:33) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:09:33) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:09:59) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:10:19) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:10:24) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:11:07) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index (for 10.0.2.2 at 2009-11-08 16:11:23) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:11:31) [GET]
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:11:31) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:11:34) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:11:34) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:17:47) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 36ms (View: 4, DB: 12) | 200 OK [http://localhost/business_unit?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:17:53) [GET]
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:21:56) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit?format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to xml (for 10.0.2.2 at 2009-11-08 16:21:56) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit?format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:22:02) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:22:18) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:22:54) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:22:54) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:23:09) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 28ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:23:09) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:23:36) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:23:36) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:24:00) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:24:00) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:24:38) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:24:38) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 0, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:25:16) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:25:16) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 24ms (View: 4, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:25:29) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: invalid reference to FROM-clause entry for table "people"
+LINE 1: SELECT people.* FROM business_units INNER JOIN people ma...
+ ^
+HINT: Perhaps you meant to reference the table alias "manager".
+: SELECT people.* FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  invalid reference to FROM-clause entry for table "people"
+LINE 1: SELECT people.*  FROM business_units    INNER JOIN people ma...
+               ^
+HINT:  Perhaps you meant to reference the table alias "manager".
+: SELECT people.*  FROM business_units    INNER JOIN people manager             ON true  WHERE business_units.created_at > '2009-08-01'):
+  app/controllers/sql_view_controller.rb:66:in `index'
+  app/controllers/sql_view_controller.rb:64:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (112.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:25:37) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT manager.* FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:25:57) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01') AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT manager.* FROM business_units INNER JOIN people manager ON true WHERE business_units.created_at > '2009-08-01'[0m
+Completed in 20ms (View: 0, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:26:47) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 16ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:26:47) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:26:56) [GET]
+  Parameters: {"table"=>"people"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml&table=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:27:56) [GET]
+  Parameters: {"table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 16ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:27:57) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:27:57) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:27:57) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:29:15) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:29:16) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 16ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:29:17) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:29:18) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:29:35) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:29:41) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 32ms (View: 4, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:30:18) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml2 (for 10.0.2.2 at 2009-11-08 16:30:29) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?format=xml2&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:30:39) [GET]
+  Parameters: {"table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=people]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:30:39) [GET]
+  Parameters: {"table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=people]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:30:41) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:30:41) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:32:04) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 68ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:32:15) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:34:25) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:34:25) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:34:49) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:34:49) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:35:03) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:35:09) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:35:33) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:35:33) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:39:11) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 16ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:39:11) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:40:25) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 16) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:40:26) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 24) | 200 OK [http://localhost/sql_view/?table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:40:29) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:40:29) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:40:32) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:40:37) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:41:16) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:41:22) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:41:27) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:41:27) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 24ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:41:28) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 4, DB: 16) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:41:54) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:41:54) [GET]
+  Parameters: {"table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 28ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:41:59) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:42:14) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:42:14) [GET]
+  Parameters: {"join"=>{"1"=>"business_units"}, "table"=>"people"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM people WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM people WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=people&join%5B1%5D=business_units]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:43:01) [GET]
+  Parameters: {"join"=>{"1"=>"people"}, "table"=>"business_units"}
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 16ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join%5B1%5D=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:43:27) [GET]
+  Parameters: {"join"=>{"1"=>"people"}, "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join%5B1%5D=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to raw (for 10.0.2.2 at 2009-11-08 16:43:27) [GET]
+  Parameters: {"join"=>{"1"=>"people"}, "table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join[1]=people&format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to raw (for 10.0.2.2 at 2009-11-08 16:43:32) [GET]
+  Parameters: {"join"=>{"1"=>"people"}, "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join[1]=people&format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:43:46) [GET]
+  Parameters: {"join"=>{"1"=>"people"}, "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join[1]=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:43:46) [GET]
+  Parameters: {"join"=>{"1"=>"people"}, "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join[1]=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:44:25) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:44:25) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 4) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:44:45) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people&format=xml]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:44:50) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:44:50) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 4, DB: 8) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:44:56) [GET]
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:45:46) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:45:51) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:45:51) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 24ms (View: 0, DB: 28) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people&format=xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:46:02) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 24ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:46:02) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:46:20) [GET]
+  Parameters: {"table"=>"business_units"}
+
+TypeError (can't convert nil into String):
+  app/controllers/sql_view_controller.rb:42:in `+'
+  app/controllers/sql_view_controller.rb:42:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (96.0ms)
+Rendered rescues/_request_and_response (4.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:46:35) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (12.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 20ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units&join1=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:46:35) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 24ms (View: 4, DB: 12) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units&join1=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:48:01) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 8) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing BusinessUnitController#index to raw (for 10.0.2.2 at 2009-11-08 16:48:01) [GET]
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/business_unit?format=raw]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:48:13) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 24ms (View: 0, DB: 16) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units&join1=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xml (for 10.0.2.2 at 2009-11-08 16:48:14) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (12.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 32ms (View: 4, DB: 20) | 200 OK [http://localhost/sql_view/?format=xml&table=business_units&join1=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xxml (for 10.0.2.2 at 2009-11-08 16:48:16) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?format=xxml&table=business_units&join1=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index to xxml (for 10.0.2.2 at 2009-11-08 16:48:17) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 32ms (View: 12, DB: 8) | 200 OK [http://localhost/sql_view/?format=xxml&table=business_units&join1=people]
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:48:21) [GET]
+  Parameters: {"join1"=>"", "table"=>"business_units"}
+  [4;35;1mSQL (0.0ms)[0m   [0mPGError: ERROR: syntax error at or near "ON"
+LINE 1: ...) FROM (SELECT 1 FROM business_units INNER JOIN ON true W...
+ ^
+: SELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN ON true WHERE true) AS count[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  syntax error at or near "ON"
+LINE 1: ...) FROM (SELECT 1  FROM business_units INNER JOIN  ON true  W...
+                                                             ^
+: SELECT count(*) FROM (SELECT 1  FROM business_units INNER JOIN  ON true  WHERE true) AS count):
+  app/controllers/sql_view_controller.rb:67:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (48.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:48:43) [GET]
+  Parameters: {"join1"=>"", "table"=>"business_units"}
+  [4;36;1mSQL (8.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 4, DB: 8) | 200 OK [http://localhost/sql_view/?table=business_units&join1=]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:48:44) [GET]
+  Parameters: {"join1"=>"", "table"=>"business_units"}
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT count(*) FROM (SELECT 1 FROM business_units WHERE true) AS count[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mSELECT * FROM business_units WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join1=]
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:48:50) [GET]
+  Parameters: {"join1"=>"business_units", "table"=>"business_units"}
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPGError: ERROR: table name "business_units" specified more than once
+: SELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN business_units ON true WHERE true) AS count[0m
+
+ActiveRecord::StatementInvalid (PGError: ERROR:  table name "business_units" specified more than once
+: SELECT count(*) FROM (SELECT 1  FROM business_units INNER JOIN business_units ON true  WHERE true) AS count):
+  app/controllers/sql_view_controller.rb:67:in `index'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (4.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:49:00) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 24ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing SqlViewController#index (for 10.0.2.2 at 2009-11-08 16:49:00) [GET]
+  Parameters: {"join1"=>"people", "table"=>"business_units"}
+  [4;35;1mSQL (8.0ms)[0m   [0mSELECT count(*) FROM (SELECT 1 FROM business_units INNER JOIN people ON true WHERE true) AS count[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSELECT * FROM business_units INNER JOIN people ON true WHERE true[0m
+Completed in 20ms (View: 0, DB: 12) | 200 OK [http://localhost/sql_view/?table=business_units&join1=people]

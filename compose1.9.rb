@@ -2,28 +2,32 @@
 # Eugene Koontz <ekoontz@hiro-tan.org>
 # Licensed under the GPL version 3.
 #
-# Note: uses ruby 1.8 "lambda" syntax (not 1.9 "->" syntax)
+# Note: uses ruby 1.9 "->" syntax (not 1.8 "lambda" syntax)
 #
 # <library functions>
 
-schematized_where = lambda{|select,from,where|
-  "SELECT '" + schema + "' AS schema, " + select + 
-  "  FROM " + schema + "." + from + 
-  " WHERE " + where 
-}
-
-from_where = lambda{|from,where|
-  lambda{|schema|
-    "SELECT '" + schema + "' AS schema, " + select +
+schematized_where = ->(select,from,where){
+  ->(schema){ 
+    "SELECT '" + schema + "' AS schema, " + select + 
     "  FROM " + schema + "." + from + 
     " WHERE " + where 
   }
 }
 
-from = lambda{|from|
-  lambda{|where|
-    lambda{|select|
-      lambda{|schema|
+from_where = ->(from,where){
+  ->(select){ 
+    ->(schema){ 
+      "SELECT '" + schema + "' AS schema, " + select +
+      "  FROM " + schema + "." + from + 
+      " WHERE " + where 
+    }
+  }
+}
+
+from = ->(from){
+  ->(where) {
+    ->(select){ 
+      ->(schema){ 
         "SELECT '" + schema + "' AS schema, " + select +
         "  FROM " + schema + "." + from + 
         " WHERE " + where 
@@ -32,15 +36,15 @@ from = lambda{|from|
   }
 }
 
-union2 = lambda{|schf|
-  lambda{|sch2,sch1|
+union2 = ->(schf){
+  ->(sch2,sch1){
     schf.call(sch1) + 
     " UNION " + 
     schf.call(sch2) 
   }
 }
 
-set_window = lambda{|query,limit,offset,orderby|
+set_window = ->(query,limit,offset,orderby) {
   query + " ORDER BY " + orderby + " LIMIT " + limit + " OFFSET " + offset 
 }
 
