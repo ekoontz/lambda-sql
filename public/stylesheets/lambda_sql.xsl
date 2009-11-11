@@ -20,6 +20,8 @@
 	<link href="/stylesheets/lambda_sql.css"
 	      media="screen" rel="stylesheet" type="text/css" />
 
+	<xsl:apply-templates select="." mode="page_specific_meta"/>
+
         <script type="text/javascript" src="/javascripts/prototype.js">
 	</script>
         <script type="text/javascript" src="/javascripts/controls.js">
@@ -62,6 +64,11 @@
     lambda_sql.xsl default body
   </xsl:template>
 
+
+  <xsl:template match="*[@count = 0]" mode="table">
+    <div style="text-align:center;font-style:italic">No results.</div>
+  </xsl:template>
+
   <xsl:template match="*" mode="table">
     <div class="table">
       <table>
@@ -74,7 +81,6 @@
 	</tbody>
       </table>
     </div>
-
   </xsl:template>
 
   <xsl:template match="*" mode="thead">

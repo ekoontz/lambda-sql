@@ -1,1 +1,6 @@
 @include "lambda_sql.css";
+
+.pre {
+    white-space: pre;
+    font-family:monospace;
+}
