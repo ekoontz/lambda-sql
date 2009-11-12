@@ -9,6 +9,7 @@
 	      doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"/>
 
   <xsl:param name="format"/>
+  <xsl:param name="table"/>
 
   <xsl:template match="/" mode="page">
     <xsl:param name="title" select="'untitled'"/>
@@ -16,7 +17,7 @@
     <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
       <head>
 	<meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8" />
-	<title>Lambda SQL:<xsl:value-of select="$title"/></title>
+	<title>Lambda SQL : <xsl:value-of select="$title"/></title>
 	<link href="/stylesheets/lambda_sql.css"
 	      media="screen" rel="stylesheet" type="text/css" />
 
@@ -54,10 +55,18 @@
   </xsl:template>
 
   <xsl:template match="*" mode="header_main">
-    <a href="/business_unit">business units</a>
-    <a href="/person/">people</a>
-    <a href="/project/">projects</a>
-    <a href="/sql_view/">views</a>
+    <xsl:apply-templates 
+       select="ancestor-or-self::view/metadata/tables/table" 
+       mode="link"/>
+  </xsl:template>
+  
+  <xsl:template match="table" mode="link">
+    <xsl:variable name="link"><xsl:choose>
+	<xsl:when test="$table">table=<xsl:value-of select="$table"/>&amp;join1=<xsl:value-of select="@name"/></xsl:when>
+	<xsl:otherwise>table=<xsl:value-of select="@name"/></xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <a href="?{$link}"><xsl:value-of select="@name"/></a>
   </xsl:template>
 
   <xsl:template match="*" mode="body">
@@ -105,5 +114,30 @@
     <td><xsl:value-of select="."/></td>
   </xsl:template>
 
+  <xsl:template match="*" mode="dropdown">
+    <xsl:param name="top"/>
+    <xsl:param name="selected"/>
+    <xsl:param name="filterby"/>
+    <xsl:param name="form_input_name"/>
+    <xsl:param name="table_alias"/>
+    <select name="{$form_input_name}" onchange="submit()">
+      <xsl:copy-of select="$top"/>
+      <xsl:apply-templates mode="option">
+	<xsl:with-param name="filterby" select="$filterby"/>
+	<xsl:with-param name="selected" select="$selected"/>
+	<xsl:with-param name="table_alias" select="$table_alias"/>
+      </xsl:apply-templates>
+    </select>
+  </xsl:template>
+
+  <xsl:template match="*" mode="option">
+    <xsl:param name="selected"/>
+    <option>
+      <xsl:if test="$selected = @name">
+	<xsl:attribute name="selected">selected</xsl:attribute>
+      </xsl:if>
+      <xsl:value-of select="@name"/>
+    </option>
+  </xsl:template>
 
 </xsl:stylesheet>

@@ -14,7 +14,8 @@
 
 development:
   adapter: postgresql
-  database: foo_company
+#  database: foo_company
+  database: bart
   username: www
   host: /var/run/postgresql
   password: 

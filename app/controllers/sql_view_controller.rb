@@ -71,56 +71,61 @@ class SqlViewController < ApplicationController
     @table = self.params["table"]
 
     if (!@table) 
-      @table = "business_units"
-      self.params['table'] = @table
-    end
-
-    if (!self.params["join1"])
-      self.params["join1"] = "people"
-    end
-
-    if (!self.params["joindir"])
-      self.params["joindir"] = ""
-    end
-
-    if (!self.params["jc1"])
-      self.params["jc1"] = "TRUE"
-    end
-
-    if (!self.params["jc2"])
-      self.params["jc2"] = "TRUE"
-    end
-
-    if (self.params["join1"] != '')
-      @kernel = @from.
-        call(
-             @table + " AS one " + 
-             self.params["joindir"] + "  JOIN " +
-             self.params["join1"] + " AS two " + 
-             " ON " + self.params["jc1"] + " = " + self.params["jc2"]
-             )
+#      @table = "business_units"
+#      self.params['table'] = @table
     else
-      @kernel = @from.
+
+      if (!self.params["join1"])
+        #      self.params["join1"] = "people"
+      end
+      
+      if (!self.params["joindir"])
+        self.params["joindir"] = ""
+      end
+      
+      if (!self.params["jc1"])
+        self.params["jc1"] = "TRUE"
+      end
+      
+      if (!self.params["jc2"])
+        self.params["jc2"] = "TRUE"
+      end
+      
+      if (!self.params["join1"])
+        self.params["join1"] = ""
+      end
+      
+      if (self.params["join1"] != '')
+        @kernel = @from.
+          call(
+               @table + " AS table_a " + 
+               self.params["joindir"] + "  JOIN " +
+               self.params["join1"] + " AS table_b " + 
+               " ON " + self.params["jc1"] + " = " + self.params["jc2"]
+               )
+      else
+        @kernel = @from.
+          call(
+               @table
+               )
+      end
+      
+      @kernel_with_where = @kernel.
         call(
-             @table
+             "true"
              )
+      
+      @kernel_with_select = @kernel_with_where.
+        call(
+             "*"
+             )
+      
+      @sql = @kernel_with_select
+      
+      @count_sql = "SELECT count(*) FROM (" + @kernel_with_where.call("1") + ") AS count"
+      @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     end
 
-    @kernel_with_where = @kernel.
-      call(
-           "true"
-           )
-
-    @kernel_with_select = @kernel_with_where.
-      call(
-           "*"
-           )
-
-    @sql = @kernel_with_select
-    
-    @count_sql = "SELECT count(*) FROM (" + @kernel_with_where.call("1") + ") AS count"
-    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
-    
     @xml = ""
 
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
@@ -164,12 +169,14 @@ class SqlViewController < ApplicationController
 
       xml.params(self.params)
 
-      xml.rows(:sql => @sql,:count => @count) {
-        @results = ActiveRecord::Base.connection.execute(@sql)
-        @results.each do |r| 
-          xml.row(r)
-        end
-      }
+      if @sql
+        xml.rows(:sql => @sql,:count => @count) {
+          @results = ActiveRecord::Base.connection.execute(@sql)
+          @results.each do |r| 
+            xml.row(r)
+          end
+        }
+      end
     }
 
     if self.params["output"] == "xml"
@@ -179,6 +186,7 @@ class SqlViewController < ApplicationController
       xslt.xml = @xml
  
       xslt.parameters = {
+        "table" => @table
       }
       
       xslt.xsl = File.read("public/stylesheets/sql_view.xsl")

@@ -21,7 +21,6 @@
   <xsl:template match="*" mode="header">
     <xsl:apply-templates select="." mode="header_main"/>
     <h2>SQL views</h2>
-
   </xsl:template>
 
   <xsl:template match="view" mode="body">
@@ -35,7 +34,7 @@
 		<xsl:with-param name="selected" select="params/@table"/>
 	      </xsl:apply-templates>
 	    </td>
-	    <td>one</td>
+	    <td>table_a</td>
 	    <td>
 	      <xsl:apply-templates select="metadata/joindirs" mode="dropdown">
 		<xsl:with-param name="form_input_name" select="'joindir'"/>
@@ -49,10 +48,16 @@
 		<xsl:with-param name="selected" select="params/@join1"/>
 	      </xsl:apply-templates>
 	    </td>
-	    <td>two</td>
+	    <td>table_b</td>
 	    <td>ON</td>
 	    <td>
 	      <xsl:apply-templates select="metadata/columns" mode="dropdown">
+		<xsl:with-param name="top">
+		  <option>
+		    <!-- will be selected if params/@jc1 is not defined. -->
+		    TRUE
+		  </option>
+		</xsl:with-param>
 		<xsl:with-param name="form_input_name" select="'jc1'"/>
 		  <xsl:with-param name="selected" select="params/@jc1"/>
 		  <xsl:with-param name="filterby" select="params/@table"/>
@@ -69,6 +74,12 @@
 	    </td>
 	    <td>
 	      <xsl:apply-templates select="metadata/columns" mode="dropdown">
+		<xsl:with-param name="top">
+		  <option>
+		    <!-- will be selected if params/@jc2 is not defined. -->
+		    TRUE
+		  </option>
+		</xsl:with-param>
 		<xsl:with-param name="form_input_name" select="'jc2'"/>
 		<xsl:with-param name="selected" select="params/@jc2"/>
 		<xsl:with-param name="filterby" select="params/@join1"/>
@@ -87,30 +98,6 @@
 	
       <xsl:apply-templates select="rows" mode="table"/>
     </div>
-  </xsl:template>
-
-  <xsl:template match="*" mode="dropdown">
-    <xsl:param name="selected"/>
-    <xsl:param name="filterby"/>
-    <xsl:param name="form_input_name"/>
-    <xsl:param name="table_alias"/>
-    <select name="{$form_input_name}" onchange="submit()">
-      <xsl:apply-templates mode="option">
-	<xsl:with-param name="filterby" select="$filterby"/>
-	<xsl:with-param name="selected" select="$selected"/>
-	<xsl:with-param name="table_alias" select="$table_alias"/>
-      </xsl:apply-templates>
-    </select>
-  </xsl:template>
-
-  <xsl:template match="*" mode="option">
-    <xsl:param name="selected"/>
-    <option>
-      <xsl:if test="$selected = @name">
-	<xsl:attribute name="selected">selected</xsl:attribute>
-      </xsl:if>
-      <xsl:value-of select="@name"/>
-    </option>
   </xsl:template>
 
   <xsl:template match="column" mode="option">

@@ -24,8 +24,9 @@ div.pre {
 h2 {
     float:right;
     width:auto;
-    padding:0.25em;
-    margin:0;
+    padding:0.5em;
+    border:1px solid blue;
+    background:yellow;
 }
 
 table {
