@@ -26,7 +26,7 @@ h2 {
     width:auto;
     padding:0.5em;
     border:1px solid blue;
-    background:yellow;
+    background:#00ffff;
 }
 
 table {
@@ -58,4 +58,8 @@ form table {
 
 form td {
     padding-left:1em;
+}
+
+th {
+    text-align:left;
 }

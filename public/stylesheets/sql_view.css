@@ -4,3 +4,8 @@
     white-space: pre;
     font-family:monospace;
 }
+
+.row th {
+    text-align:right;
+    border-right:1px solid black;
+}

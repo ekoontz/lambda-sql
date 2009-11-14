@@ -11,6 +11,8 @@
   <xsl:param name="format"/>
   <xsl:param name="table"/>
 
+  <xsl:include href="table.xsl"/>
+
   <xsl:template match="/" mode="page">
     <xsl:param name="title" select="'untitled'"/>
     <xsl:param name="onload"/>
@@ -35,12 +37,21 @@
 	</script>
 
       </head>
-      <body onload="{$onload}">
+      <body onload="{$onload}; update_xml_url();">
 	<div class="header">
 	  <xsl:apply-templates select="." mode="header"/>
+	  <div style="padding:0;margin;0;border:0;float:right">
+	    <a href="?" id="as_xml_url">
+	    [as xml]
+	    </a>
+	  </div>
 	</div>
 	<div>
 	  <xsl:apply-templates select="." mode="body"/>
+	</div>
+	
+	<div class="xml_iframe">
+	  <iframe id="as_xml_iframe" width="100%" src=""/>
 	</div>
       </body>
     </html>
@@ -71,47 +82,6 @@
 
   <xsl:template match="*" mode="body">
     lambda_sql.xsl default body
-  </xsl:template>
-
-
-  <xsl:template match="*[@count = 0]" mode="table">
-    <div style="text-align:center;font-style:italic">No results.</div>
-  </xsl:template>
-
-  <xsl:template match="*" mode="table">
-    <div class="table">
-      <table>
-	<thead>
-	  <xsl:apply-templates select="*[position() = 1]" mode="thead">
-	  </xsl:apply-templates>
-	</thead>
-	<tbody>
-	  <xsl:apply-templates select="*" mode="tbody"/>
-	</tbody>
-      </table>
-    </div>
-  </xsl:template>
-
-  <xsl:template match="*" mode="thead">
-    <tr>
-      <th/>
-      <xsl:apply-templates select="@*" mode="th"/>
-    </tr>
-  </xsl:template>
-
-  <xsl:template match="@*" mode="th">
-    <th><xsl:value-of select="name()"/></th>
-  </xsl:template>
-
-  <xsl:template match="*" mode="tbody">
-    <tr class="row_{position() mod 2}">
-      <th><xsl:value-of select="position()"/></th>
-      <xsl:apply-templates select="@*" mode="td"/>
-    </tr>
-  </xsl:template>
-
-  <xsl:template match="@*" mode="td">
-    <td><xsl:value-of select="."/></td>
   </xsl:template>
 
   <xsl:template match="*" mode="dropdown">

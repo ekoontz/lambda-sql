@@ -185,9 +185,11 @@ class SqlViewController < ApplicationController
       xslt = XML::XSLT.new()
       xslt.xml = @xml
  
-      xslt.parameters = {
-        "table" => @table
-      }
+      if @table 
+        xslt.parameters = {
+          "table" => @table
+        }
+      end
       
       xslt.xsl = File.read("public/stylesheets/sql_view.xsl")
       @out = xslt.serve()
