@@ -49,14 +49,12 @@ class SqlViewController < ApplicationController
            )
 
     @sql = @kernel_with_select
-    
-    @count_sql = "SELECT count(*) FROM (" + @kernel_with_where.call("1") + ") AS count"
-    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
-
 
   end
 
   def index
+
+
 
     @from = lambda{|from|
       lambda{|where|
@@ -68,69 +66,58 @@ class SqlViewController < ApplicationController
       }
     }
 
+    # <build the kernel from the user's desired params.>
+    #  (we assume that the "table" param is defined to real table by the
+    #  time this function (the sql_view.index controller) is called.)
     @table = self.params["table"]
-
-    if (!@table) 
-#      @table = "business_units"
-#      self.params['table'] = @table
-    else
-
-      if (!self.params["join1"])
-        #      self.params["join1"] = "people"
-      end
-      
-      if (!self.params["joindir"])
-        self.params["joindir"] = ""
-      end
-      
-      if (!self.params["jc1"])
-        self.params["jc1"] = "TRUE"
-      end
-      
-      if (!self.params["jc2"])
-        self.params["jc2"] = "TRUE"
-      end
-      
-      if (!self.params["join1"])
-        self.params["join1"] = ""
-      end
-      
-      if (self.params["join1"] != '')
-        @kernel = @from.
-          call(
-               @table + " AS table_a " + 
-               self.params["joindir"] + "  JOIN " +
-               self.params["join1"] + " AS table_b " + 
-               " ON " + self.params["jc1"] + " = " + self.params["jc2"]
-               )
-      else
-        @kernel = @from.
-          call(
-               @table
-               )
-      end
-      
-      @kernel_with_where = @kernel.
-        call(
-             "true"
-             )
-      
-      @kernel_with_select = @kernel_with_where.
-        call(
-             "*"
-             )
-      
-      @sql = @kernel_with_select
-      
-      @count_sql = "SELECT count(*) FROM (" + @kernel_with_where.call("1") + ") AS count"
-      @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
+    
+    if (!self.params["joindir"])
+      self.params["joindir"] = ""
     end
+    
+    if (!self.params["jc1"])
+      self.params["jc1"] = "TRUE"
+    end
+    
+    if (!self.params["jc2"])
+      self.params["jc2"] = "TRUE"
+    end
+    
+    if (!self.params["join1"])
+      self.params["join1"] = ""
+    end
+    
+    if (self.params["join1"] != '')
+      @kernel = @from.
+        call(
+             @table + " AS table_a " + 
+             self.params["joindir"] + "  JOIN " +
+             self.params["join1"] + " AS table_b " + 
+             " ON " + self.params["jc1"] + " = " + self.params["jc2"]
+             )
+    else
+      @kernel = @from.
+        call(
+             @table
+             )
+    end
+    # </build the kernel from the user's desired params.>
 
+    @sql = self.query(@kernel)
+
+    # <count the number of rows for this query>
+    @count_sql = "SELECT count(*) FROM (" + 
+      @kernel.call("true").call("1")  + ") AS count"
+    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
+    # </count the number of rows for this query>
+
+
+    # <build the xml output.>
     @xml = ""
-
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
     xml.view {
 
+      # <xml output part 1: metadata about entire database.>
       xml.metadata {
 
         xml.joindirs {
@@ -167,8 +154,13 @@ class SqlViewController < ApplicationController
 
       }
 
-      xml.params(self.params)
+      # </xml output part 1: metadata about entire database.>
 
+      # <xml output part 2: metadata about client request>
+      xml.params(self.params)
+      # </xml output part 2: metadata about client request>
+
+      # <xml output part 3: actual payload: client query results>
       if @sql
         xml.rows(:sql => @sql,:count => @count) {
           @results = ActiveRecord::Base.connection.execute(@sql)
@@ -177,7 +169,12 @@ class SqlViewController < ApplicationController
           end
         }
       end
+
+      # </xml output part 3: actual payload: client query results>
+
     }
+    # </build the xml output.>
+
 
     if self.params["output"] == "xml"
       render :xml => @xml
