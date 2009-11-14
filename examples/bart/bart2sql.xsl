@@ -9,7 +9,7 @@
     <xsl:apply-templates/>
   </xsl:template>
 
-  <xsl:template match="*">
+  <xsl:template match="*|text()">
     <xsl:apply-templates/>
   </xsl:template>
 
