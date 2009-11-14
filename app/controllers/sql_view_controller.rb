@@ -98,11 +98,28 @@ class SqlViewController < ApplicationController
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
 
     mytime = Time.now
-
+    # fixme: add page load time (Time.now minus request_start_time)
     xml.view ("time" => mytime)  {
       
-      # <xml output part 1: metadata about entire database.>
+
+      # <xml output part 1: actual payload: client query results>
+      if @sql
+        xml.rows(:sql => @sql,:count => @count) {
+          @results = ActiveRecord::Base.connection.execute(@sql)
+          @results.each do |r| 
+            xml.row(r)
+          end
+        }
+      end
+
+      # </xml output part 1: actual payload: client query results>
+
+
+      # <xml output part 2: metadata about entire database.>
       xml.metadata {
+
+        # <metadata about client request (self.params)>
+        xml.params(self.params)
 
         xml.joindirs {
           xml.joindir(:name => "LEFT")
@@ -131,23 +148,9 @@ class SqlViewController < ApplicationController
 
       }
 
-      # </xml output part 1: metadata about entire database.>
+      # </xml output part 2: metadata about entire database.>
 
-      # <xml output part 2: metadata about client request>
-      xml.params(self.params)
-      # </xml output part 2: metadata about client request>
 
-      # <xml output part 3: actual payload: client query results>
-      if @sql
-        xml.rows(:sql => @sql,:count => @count) {
-          @results = ActiveRecord::Base.connection.execute(@sql)
-          @results.each do |r| 
-            xml.row(r)
-          end
-        }
-      end
-
-      # </xml output part 3: actual payload: client query results>
 
     }
     # </build the xml output.>

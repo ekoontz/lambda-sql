@@ -31,21 +31,21 @@
 	    <td>
 	      <xsl:apply-templates select="metadata/tables" mode="dropdown">
 		<xsl:with-param name="form_input_name" select="'table'"/>
-		<xsl:with-param name="selected" select="params/@table"/>
+		<xsl:with-param name="selected" select="metadata/params/@table"/>
 	      </xsl:apply-templates>
 	    </td>
 	    <td>table_a</td>
 	    <td>
 	      <xsl:apply-templates select="metadata/joindirs" mode="dropdown">
 		<xsl:with-param name="form_input_name" select="'joindir'"/>
-		<xsl:with-param name="selected" select="params/@joindir"/>
+		<xsl:with-param name="selected" select="metadata/params/@joindir"/>
 	      </xsl:apply-templates>
 	    </td>
 	    <td>JOIN</td>
 	    <td>
 	      <xsl:apply-templates select="metadata/tables" mode="dropdown">
 		<xsl:with-param name="form_input_name" select="'join1'"/>
-		<xsl:with-param name="selected" select="params/@join1"/>
+		<xsl:with-param name="selected" select="metadata/params/@join1"/>
 	      </xsl:apply-templates>
 	    </td>
 	    <td>table_b</td>
@@ -59,8 +59,8 @@
 		  </option>
 		</xsl:with-param>
 		<xsl:with-param name="form_input_name" select="'jc1'"/>
-		  <xsl:with-param name="selected" select="params/@jc1"/>
-		  <xsl:with-param name="filterby" select="params/@table"/>
+		  <xsl:with-param name="selected" select="metadata/params/@jc1"/>
+		  <xsl:with-param name="filterby" select="metadata/params/@table"/>
 		  <xsl:with-param name="table_alias" select="'table_a'"/>
 	      </xsl:apply-templates>
 	    </td>
@@ -76,13 +76,13 @@
 	      <xsl:apply-templates select="metadata/columns" mode="dropdown">
 		<xsl:with-param name="top">
 		  <option>
-		    <!-- will be selected if params/@jc2 is not defined. -->
+		    <!-- will be selected if metadata/params/@jc2 is not defined. -->
 		    TRUE
 		  </option>
 		</xsl:with-param>
 		<xsl:with-param name="form_input_name" select="'jc2'"/>
-		<xsl:with-param name="selected" select="params/@jc2"/>
-		<xsl:with-param name="filterby" select="params/@join1"/>
+		<xsl:with-param name="selected" select="metadata/params/@jc2"/>
+		<xsl:with-param name="filterby" select="metadata/params/@join1"/>
 		<xsl:with-param name="table_alias" select="'table_b'"/>
 	      </xsl:apply-templates>
 	    </td>
