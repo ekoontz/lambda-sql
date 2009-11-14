@@ -23,38 +23,7 @@ class SqlViewController < ApplicationController
   def delete
   end
 
-  def query(kernel)
-    @from = lambda{|from|
-      lambda{|where|
-        lambda{|select|
-          "SELECT " + select +
-          "  FROM " + from + 
-          " WHERE " + where 
-        }
-      }
-    }
-
-    @table = self.params["table"]
-
-    @kernel = kernel
-
-    @kernel_with_where = @kernel.
-      call(
-           "true"
-           )
-
-    @kernel_with_select = @kernel_with_where.
-      call(
-           "*"
-           )
-
-    @sql = @kernel_with_select
-
-  end
-
   def index
-
-
 
     @from = lambda{|from|
       lambda{|where|
@@ -88,7 +57,7 @@ class SqlViewController < ApplicationController
     end
     
     if (self.params["join1"] != '')
-      @kernel = @from.
+      kernel = @from.
         call(
              @table + " AS table_a " + 
              self.params["joindir"] + "  JOIN " +
@@ -96,21 +65,21 @@ class SqlViewController < ApplicationController
              " ON " + self.params["jc1"] + " = " + self.params["jc2"]
              )
     else
-      @kernel = @from.
+      kernel = @from.
         call(
              @table
              )
     end
     # </build the kernel from the user's desired params.>
 
-    @sql = self.query(@kernel)
+    # the actual SQL that will be sent to the database:
+    @sql = kernel.call("true").call("*")
 
-    # <count the number of rows for this query>
+    # <count the number of rows for this query (@sql) >
     @count_sql = "SELECT count(*) FROM (" + 
-      @kernel.call("true").call("1")  + ") AS count"
+      kernel.call("true").call("1")  + ") AS count"
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     # </count the number of rows for this query>
-
 
     # <build the xml output.>
     @xml = ""
