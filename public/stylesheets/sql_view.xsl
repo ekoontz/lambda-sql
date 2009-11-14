@@ -96,7 +96,14 @@
 	<xsl:value-of select="rows/@sql"/>
       </div>
 	
-      <xsl:apply-templates select="rows" mode="table"/>
+      <xsl:apply-templates select="rows" mode="table">
+	<xsl:with-param name="inputs">
+	  <xsl:apply-templates select="rows/@*" mode="table_inputs"/>
+	  <xsl:apply-templates select="metadata/params/@*" mode="table_inputs"/>
+	</xsl:with-param>
+      </xsl:apply-templates>
+
+
     </div>
   </xsl:template>
 

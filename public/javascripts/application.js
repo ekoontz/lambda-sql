@@ -11,3 +11,15 @@ function update_xml_url() {
 	document.getElementById("as_xml_iframe").src=document.location + "&output=xml";
     }
 }
+
+function page_forward() {
+    document.getElementById("page") = "forward";
+}
+
+function onload_app() {
+    document.getElementById("page_forward").addEventListener('click',page_forward,true);
+
+    update_xml_url();
+
+}
+

@@ -25,16 +25,6 @@ class SqlViewController < ApplicationController
 
   def index
 
-    @from = lambda{|from|
-      lambda{|where|
-        lambda{|select|
-          "SELECT " + select +
-          "  FROM " + from + 
-          " WHERE " + where 
-        }
-      }
-    }
-
     # <build the kernel from the user's desired params.>
     #  (we assume that the "table" param is defined to real table by the
     #  time this function (the sql_view.index controller) is called.)
@@ -55,6 +45,16 @@ class SqlViewController < ApplicationController
     if (!self.params["join1"])
       self.params["join1"] = ""
     end
+
+    @from = lambda{|from|
+      lambda{|where|
+        lambda{|select|
+          "SELECT " + select +
+          "  FROM " + from + 
+          " WHERE " + where 
+        }
+      }
+    }
     
     if (self.params["join1"] != '')
       kernel = @from.
@@ -73,7 +73,25 @@ class SqlViewController < ApplicationController
     # </build the kernel from the user's desired params.>
 
     # compose the actual SQL that will be sent to the database:
-    @sql = kernel.call("true").call("*")
+    @offset = "50"
+
+    if (self.params["offset"]) 
+      @offset = self.params["offset"]
+#      @offset = "50"
+    end
+
+
+    if (self.params["page"] == "forward") 
+      @offset = (@offset.to_i + 10).to_s
+    end
+
+    @limit = "10"
+    if (self.params["limit"])
+      @limit = self.params["limit"]
+    end
+
+
+    @sql = kernel.call("true").call("*") + " OFFSET " + @offset + " LIMIT " + @limit
 
     # DO THE ACTUAL QUERY.
     @results = ActiveRecord::Base.connection.execute(@sql)
@@ -102,12 +120,16 @@ class SqlViewController < ApplicationController
 
     mytime = Time.now
     # fixme: add page load time (Time.now minus request_start_time)
-    xml.view ("time" => mytime)  {
+    xml.view (:time => mytime)  {
       
 
       # <xml output part 1: actual payload: client query results>
       if @sql
-        xml.rows(:sql => @sql,:count => @count) {
+        xml.rows(:sql => @sql,
+                 :count => @count,
+                 :offset => @offset,
+                 :limit => @limit
+                 ) {
           @results.each do |r| 
             xml.row(r)
           end
@@ -129,7 +151,9 @@ class SqlViewController < ApplicationController
           xml.joindir(:name => "INNER")
         }
 
-        xml.tables(:sql => tables_sql,:count => tables_count) {
+        xml.tables(:sql => tables_sql,
+                   :count => tables_count
+                   ) {
           @results_db.each do |r| 
             xml.table(r)
           end

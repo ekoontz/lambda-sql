@@ -37,7 +37,7 @@
 	</script>
 
       </head>
-      <body onload="{$onload}; update_xml_url();">
+      <body onload="{$onload}; onload_app();">
 	<div class="header">
 	  <xsl:apply-templates select="." mode="header"/>
 	  <div style="padding:0;margin;0;border:0;float:right">
