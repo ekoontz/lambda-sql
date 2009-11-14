@@ -61,7 +61,7 @@
 		<xsl:with-param name="form_input_name" select="'jc1'"/>
 		  <xsl:with-param name="selected" select="params/@jc1"/>
 		  <xsl:with-param name="filterby" select="params/@table"/>
-		  <xsl:with-param name="table_alias" select="'one'"/>
+		  <xsl:with-param name="table_alias" select="'table_a'"/>
 	      </xsl:apply-templates>
 	    </td>
 	    <td>
@@ -83,7 +83,7 @@
 		<xsl:with-param name="form_input_name" select="'jc2'"/>
 		<xsl:with-param name="selected" select="params/@jc2"/>
 		<xsl:with-param name="filterby" select="params/@join1"/>
-		<xsl:with-param name="table_alias" select="'two'"/>
+		<xsl:with-param name="table_alias" select="'table_b'"/>
 	      </xsl:apply-templates>
 	    </td>
 	  </tr>
