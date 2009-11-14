@@ -75,12 +75,15 @@ class SqlViewController < ApplicationController
     # compose the actual SQL that will be sent to the database:
     @sql = kernel.call("true").call("*")
 
-    # <count the number of rows for this query (@sql) >
+    # DO THE ACTUAL QUERY.
+    @results = ActiveRecord::Base.connection.execute(@sql)
+
+    # <count the number of rows that would be returned this query (@sql) 
+    # without any LIMIT or OFFSET.>
     @count_sql = "SELECT count(*) FROM (" + 
       kernel.call("true").call("1")  + ") AS count"
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
-    # </count the number of rows for this query>
-
+    # </count the number of rows..>
 
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
@@ -105,7 +108,6 @@ class SqlViewController < ApplicationController
       # <xml output part 1: actual payload: client query results>
       if @sql
         xml.rows(:sql => @sql,:count => @count) {
-          @results = ActiveRecord::Base.connection.execute(@sql)
           @results.each do |r| 
             xml.row(r)
           end
