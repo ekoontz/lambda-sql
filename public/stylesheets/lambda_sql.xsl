@@ -51,7 +51,7 @@
 	</div>
 	
 	<div class="xml_iframe">
-	  <iframe id="as_xml_iframe" width="100%" src=""/>
+	  <iframe id="as_xml_iframe" height="500" width="100%" src=""/>
 	</div>
       </body>
     </html>

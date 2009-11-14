@@ -81,11 +81,26 @@ class SqlViewController < ApplicationController
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     # </count the number of rows for this query>
 
+
+    # <get database metadata>
+    tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
+    tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
+    
+    tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
+
+    tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
+    @results_db = ActiveRecord::Base.connection.execute(tables_sql)
+    # </get database metadata>
+
+
     # <build the xml output.>
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
-    xml.view {
 
+    mytime = Time.now
+
+    xml.view ("time" => mytime)  {
+      
       # <xml output part 1: metadata about entire database.>
       xml.metadata {
 
@@ -95,15 +110,8 @@ class SqlViewController < ApplicationController
           xml.joindir(:name => "INNER")
         }
 
-        tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
-        tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
-
-        tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
-        tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
-
         xml.tables(:sql => tables_sql,:count => tables_count) {
-          @results = ActiveRecord::Base.connection.execute(tables_sql)
-          @results.each do |r| 
+          @results_db.each do |r| 
             xml.table(r)
           end
         }
