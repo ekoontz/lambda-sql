@@ -72,7 +72,7 @@ class SqlViewController < ApplicationController
     end
     # </build the kernel from the user's desired params.>
 
-    # the actual SQL that will be sent to the database:
+    # compose the actual SQL that will be sent to the database:
     @sql = kernel.call("true").call("*")
 
     # <count the number of rows for this query (@sql) >
