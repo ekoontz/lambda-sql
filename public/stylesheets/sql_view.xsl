@@ -98,13 +98,82 @@
 	
       <xsl:apply-templates select="rows" mode="table">
 	<xsl:with-param name="inputs">
-	  <xsl:apply-templates select="rows/@*" mode="table_inputs"/>
-	  <xsl:apply-templates select="metadata/params/@*" mode="table_inputs"/>
+	  <table style="display:none">
+	    <xsl:apply-templates 
+	       select="rows/@*[(position() mod 2) = 1][1]" 
+	       mode="table_inputs_tr"/>
+
+	    <xsl:apply-templates 
+	       select="metadata/params/@*[(position() mod 2) = 1][1]" 
+	       mode="table_inputs_tr"/>
+	  </table>
+
 	</xsl:with-param>
+
       </xsl:apply-templates>
 
-
     </div>
+  </xsl:template>
+
+    <!-- get rid of 'offset', 'count' etc. -->
+  <xsl:template match="params/@offset" mode="table_inputs"/>
+  <xsl:template match="@sql" mode="table_inputs"/>
+  <xsl:template match="@count" mode="table_inputs"/>
+  <xsl:template match="@limit" mode="table_inputs"/>
+  <xsl:template match="@format" mode="table_inputs"/>
+
+  <xsl:template match="rows/@*" mode="table_inputs_tr">
+    <xsl:param name="offset">0</xsl:param>
+    <tr>
+      <td>
+	<xsl:apply-templates select="." mode="table_inputs"/>
+      </td>
+      <td>
+	<xsl:apply-templates 
+	   select="ancestor-or-self::rows/@*[((1 + $offset) * 2)]"
+	   mode="table_inputs"/>
+      </td>
+    </tr>
+    <xsl:apply-templates select="ancestor-or-self::rows/@*[(position() mod 2) = 1][$offset + 2]" mode="table_inputs_tr">
+      <xsl:with-param name="offset"><xsl:value-of select="$offset + 1"/></xsl:with-param>
+    </xsl:apply-templates>
+
+  </xsl:template>
+
+  <xsl:template match="rows/@*" mode="table_inputs_tr">
+    <xsl:param name="offset">0</xsl:param>
+    <tr>
+      <td>
+	<xsl:apply-templates select="." mode="table_inputs"/>
+      </td>
+      <td>
+	<xsl:apply-templates 
+	   select="ancestor-or-self::rows/@*[((1 + $offset) * 2)]"
+	   mode="table_inputs"/>
+      </td>
+    </tr>
+    <xsl:apply-templates select="ancestor-or-self::rows/@*[(position() mod 2) = 1][$offset + 2]" mode="table_inputs_tr">
+      <xsl:with-param name="offset"><xsl:value-of select="$offset + 1"/></xsl:with-param>
+    </xsl:apply-templates>
+
+  </xsl:template>
+
+  <xsl:template match="metadata/params/@*" mode="table_inputs_tr">
+    <xsl:param name="offset">0</xsl:param>
+    <tr>
+      <td>
+	<xsl:apply-templates select="." mode="table_inputs"/>
+      </td>
+      <td>
+	<xsl:apply-templates 
+	   select="ancestor-or-self::metadata/params/@*[((1 + $offset) * 2)]"
+	   mode="table_inputs"/>
+      </td>
+    </tr>
+    <xsl:apply-templates select="ancestor-or-self::metadata/params/@*[(position() mod 2) = 1][$offset + 2]" mode="table_inputs_tr">
+      <xsl:with-param name="offset"><xsl:value-of select="$offset + 1"/></xsl:with-param>
+    </xsl:apply-templates>
+
   </xsl:template>
 
   <xsl:template match="column" mode="option">

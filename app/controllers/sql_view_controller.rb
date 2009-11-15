@@ -73,28 +73,21 @@ class SqlViewController < ApplicationController
     # </build the kernel from the user's desired params.>
 
     # compose the actual SQL that will be sent to the database:
-    @offset = "50"
-
     if (self.params["offset"]) 
       @offset = self.params["offset"]
-#      @offset = "50"
     end
-
 
     if (self.params["page"] == "forward") 
       @offset = (@offset.to_i + 10).to_s
     end
 
-    @limit = "10"
-    if (self.params["limit"])
-      @limit = self.params["limit"]
+    if (self.params["page"] == "back") 
+      @offset = (@offset.to_i - 10).to_s
     end
 
-
-    @sql = kernel.call("true").call("*") + " OFFSET " + @offset + " LIMIT " + @limit
-
-    # DO THE ACTUAL QUERY.
-    @results = ActiveRecord::Base.connection.execute(@sql)
+    if (self.params["page"] == "beginning") 
+      @offset = 0
+    end
 
     # <count the number of rows that would be returned this query (@sql) 
     # without any LIMIT or OFFSET.>
@@ -102,6 +95,24 @@ class SqlViewController < ApplicationController
       kernel.call("true").call("1")  + ") AS count"
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     # </count the number of rows..>
+
+    if (self.params["page"] == "end") 
+      @offset = @count.to_i - ( @count.to_i % 10 )
+    end
+
+    if (@offset)
+    else
+      @offset = 0
+    end
+
+    @offset = @offset.to_s
+
+    @limit = "10"
+
+    @sql = kernel.call("true").call("*") + " OFFSET " + @offset + " LIMIT " + @limit
+
+    # DO THE ACTUAL QUERY.
+    @results = ActiveRecord::Base.connection.execute(@sql)
 
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")

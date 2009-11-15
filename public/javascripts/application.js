@@ -13,9 +13,21 @@ function update_xml_url() {
 }
 
 function page_forward() {
-    document.getElementById("page") = "forward";
+    document.getElementById("page").value = "forward";
 }
 
+function page_back() {
+    document.getElementById("page").value = "back";
+}
+
+function page_to_beginning() {
+    document.getElementById("page").value = "beginning";
+}
+
+function page_to_end() {
+    document.getElementById("page").value = "end";
+}
+    
 function onload_app() {
     document.getElementById("page_forward").addEventListener('click',page_forward,true);
 
