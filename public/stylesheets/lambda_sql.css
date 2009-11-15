@@ -9,7 +9,7 @@ a {
 }
 
 div {
-    background: #00ee99;
+    background: #dddfe3;
     border:1px solid black;
     margin:0.25em;
     padding:0.75em;
@@ -40,12 +40,12 @@ thead tr {
 }
 
 thead th {
-    background: #00ffff;
+    background: #bda6b5;
     border-bottom:1px solid black;
 }
 
 tr.row_0 {
-    background: #00ffff;
+    background: #bda6b5;
 }
 
 tr.row_1 {

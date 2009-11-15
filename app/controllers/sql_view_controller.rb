@@ -55,6 +55,16 @@ class SqlViewController < ApplicationController
         }
       }
     }
+
+    # <get database metadata>
+    tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
+    tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
+    
+    tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
+
+    tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
+    @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
+    # </get database metadata>
     
     if (self.params["join1"] != '')
       kernel = @from.
@@ -65,6 +75,13 @@ class SqlViewController < ApplicationController
              " ON " + self.params["jc1"] + " = " + self.params["jc2"]
              )
     else
+
+      if (@table)
+      else
+        @table = "adjacent"
+      end
+      @table = "adjacent"
+      
       kernel = @from.
         call(
              @table
@@ -77,12 +94,8 @@ class SqlViewController < ApplicationController
       @offset = self.params["offset"]
     end
 
-    if (self.params["page"] == "forward") 
-      @offset = (@offset.to_i + 10).to_s
-    end
-
     if (self.params["page"] == "back") 
-      @offset = (@offset.to_i - 10).to_s
+      @offset = [(@offset.to_i - 10),0].max
     end
 
     if (self.params["page"] == "beginning") 
@@ -96,8 +109,12 @@ class SqlViewController < ApplicationController
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     # </count the number of rows..>
 
+    if (self.params["page"] == "forward") 
+      @offset = [@offset.to_i + 10,@count.to_i - (@count.to_i % 10)].min
+    end
+
     if (self.params["page"] == "end") 
-      @offset = @count.to_i - ( @count.to_i % 10 )
+      @offset = [0,@count.to_i - ( @count.to_i % 10 )].max
     end
 
     if (@offset)
@@ -114,24 +131,13 @@ class SqlViewController < ApplicationController
     # DO THE ACTUAL QUERY.
     @results = ActiveRecord::Base.connection.execute(@sql)
 
-    # <get database metadata>
-    tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
-    tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
-    
-    tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
-
-    tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
-    @results_db = ActiveRecord::Base.connection.execute(tables_sql)
-    # </get database metadata>
-
-
     # <build the xml output.>
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
 
     mytime = Time.now
     # fixme: add page load time (Time.now minus request_start_time)
-    xml.view (:time => mytime)  {
+    xml.view(:time => mytime)  {
       
 
       # <xml output part 1: actual payload: client query results>
@@ -165,7 +171,7 @@ class SqlViewController < ApplicationController
         xml.tables(:sql => tables_sql,
                    :count => tables_count
                    ) {
-          @results_db.each do |r| 
+          @results_dbinfo.each do |r| 
             xml.table(r)
           end
         }
