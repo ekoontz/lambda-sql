@@ -24,22 +24,6 @@ class SqlViewController < ApplicationController
   end
 
   def index
-    
-    if (!self.params["joindir"])
-      self.params["joindir"] = ""
-    end
-    
-    if (!self.params["jc1"])
-      self.params["jc1"] = "TRUE"
-    end
-    
-    if (!self.params["jc2"])
-      self.params["jc2"] = "TRUE"
-    end
-    
-    if (!self.params["join1"])
-      self.params["join1"] = ""
-    end
 
     @from = lambda{|from|
       lambda{|where|
@@ -50,6 +34,14 @@ class SqlViewController < ApplicationController
         }
       }
     }
+
+    def join(table_a,table_b,join_type,condition1,condition2)
+      retval = table_a.to_s
+      if join_type
+        retval = retval + " " + join_type + " JOIN " + table_b + " ON " + condition1 + " = " + condition2
+      end
+      return retval
+    end
 
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
@@ -72,58 +64,46 @@ class SqlViewController < ApplicationController
       @table = @results_dbinfo[0]['name']
     end
     
-    kernel = @from.call(@table)
+    kernel = 
+      @from.call(
+                 join(@table,
+                      self.params["join1"],self.params["joindir"],self.params["jc1"],self.params["jc2"])
+                 )
 
-    if (self.params["join1"] != '')
-      kernel = @from.
-        call(
-             @table + " AS table_a " + 
-             self.params["joindir"] + "  JOIN " +
-             self.params["join1"] + " AS table_b " + 
-             " ON " + self.params["jc1"] + " = " + self.params["jc2"]
-             )
-    end
     # </define the kernel function from the user's desired params.>
 
     # <use the kernel to 
-    #  count the number of rows that would be returned this query (@sql) 
+    #  count the number of rows that would be returned this query.
     # without any LIMIT or OFFSET.>
     @count_sql = "SELECT count(*) FROM (" + 
       kernel.call("true").call("1")  + ") AS count"
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     # </count the number of rows..>
 
-    # compose the actual SQL that will be sent to the database:
-    if (self.params["offset"]) 
-      @offset = self.params["offset"]
-    end
+    @offset = self.params["offset"].to_i
 
-    if (self.params["page"] == "back") 
-      @offset = [(@offset.to_i - 10),0].max
-    end
-
+    # <paging>
     if (self.params["page"] == "beginning") 
       @offset = 0
     end
 
+    if (self.params["page"] == "back") 
+      @offset = [(@offset - 10),0].max
+    end
+
     if (self.params["page"] == "forward") 
-      @offset = [@offset.to_i + 10,@count.to_i - (@count.to_i % 10)].min
+      @offset = [@offset + 10,@count.to_i - (@count.to_i % 10)].min
     end
 
     if (self.params["page"] == "end") 
       @offset = [0,@count.to_i - ( @count.to_i % 10 )].max
     end
+    # </paging>
 
-    if (@offset)
-    else
-      @offset = 0
-    end
+    @limit = 10
 
-    @offset = @offset.to_s
-
-    @limit = "10"
-
-    @sql = kernel.call("true").call("*") + " OFFSET " + @offset + " LIMIT " + @limit
+    # compose the actual SQL that will be sent to the database:
+    @sql = kernel.call("true").call("*") + " OFFSET " + @offset.to_s + " LIMIT " + @limit.to_s
 
     # DO THE ACTUAL QUERY.
     @results = ActiveRecord::Base.connection.execute(@sql)

@@ -29,8 +29,6 @@ function page_to_end() {
 }
     
 function onload_app() {
-    document.getElementById("page_forward").addEventListener('click',page_forward,true);
-
     update_xml_url();
 
 }
