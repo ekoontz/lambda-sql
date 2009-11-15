@@ -43,6 +43,34 @@ class SqlViewController < ApplicationController
       }
     }
 
+
+    @from_new = lambda{|table_alias|
+      lambda{|table|
+        "SELECT " + "*" + 
+        "  FROM " + table + " " + table_alias + 
+        " WHERE " + table_alias + ".c = 'v'"
+      }
+    }
+
+    @from_new_html = lambda{|table_alias|
+      lambda{|table|
+        "<html><table xmlns='http://www.w3.org/1999/xhtml'>" +
+        "<tr><th>SELECT</th><td>*</td></tr>" +
+        "<tr><th>FROM</th><td>"+table+" "+  table_alias + "</td></tr>" +
+        "<tr><th>WHERE</th><td>"+table_alias+".c='v'</td></tr>" +
+        "</table></html>"
+      }
+    }
+
+    if (self.params["table"])
+      @table = self.params["table"]
+    else
+      # if no table given, use first table from list of database tables.
+      @table = @results_dbinfo[0]['name']
+    end
+
+    @from_new_sql = @from_new.call("table_a").call(@table)
+
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
     tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
@@ -56,13 +84,6 @@ class SqlViewController < ApplicationController
     # <define the kernel from the user's desired params.>
     #  (we assume that the "table" param is defined to real table by the
     #  time this function (the sql_view.index controller) is called.)
-
-    if (self.params["table"])
-      @table = self.params["table"]
-    else
-      # if no table given, use first table from list of database tables.
-      @table = @results_dbinfo[0]['name']
-    end
     
     kernel = 
       @from.call(
@@ -115,7 +136,11 @@ class SqlViewController < ApplicationController
     mytime = Time.now
     # fixme: add page load time (Time.now minus request_start_time)
     xml.view(:time => mytime)  {
-      
+
+      xml.new_sql(@from_new_sql)
+
+      # @from_new_html
+      xml << @from_new_html.call("table_a").call(@table)
 
       # <xml output part 1: actual payload: client query results>
       if @sql

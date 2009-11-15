@@ -23,8 +23,18 @@
     <h2>SQL views</h2>
   </xsl:template>
 
+  <xsl:template match="html/*" mode="add_form_markup">
+    <div class="sql_form">
+      <xsl:copy-of select="."/>
+    </div>
+  </xsl:template>
+
   <xsl:template match="view" mode="body">
     <form action="?" method="get">
+      <xsl:apply-templates select="html/*" mode="add_form_markup"/>
+      <pre>
+	<xsl:copy-of select="new_sql"/>
+      </pre>
       <div>
 	<table>
 	  <tr>

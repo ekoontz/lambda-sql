@@ -44,3 +44,24 @@ th.right {
     text-align:right;
     width:10%;
 }
+
+div.sql_form {
+    width:50%;
+    border:0;
+    background: white;
+}
+
+div.sql_form table {
+    width:100%;
+    border:0;
+}
+
+div.sql_form td {
+    border:1px solid green;
+    white-space:pre;
+}
+
+div.sql_form th {
+    padding:0.25em;
+    text-align:right;
+}
