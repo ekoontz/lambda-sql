@@ -52,6 +52,14 @@ class SqlViewController < ApplicationController
       }
     }
 
+    @where_condition = lambda{|alias1|
+      lambda{|col1|
+        lambda{|col2|
+          alias1+"."+col1 + " = " + col2
+        }
+      }
+    }
+
     @from_new_html = lambda{|table_alias|
       lambda{|table|
         "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
@@ -59,6 +67,19 @@ class SqlViewController < ApplicationController
         "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>"+  table_alias + "</td></tr>" +
         "<tr><th>WHERE</th><td>"+table_alias+".c='v'</td></tr>" +
         "</table></html>"
+      }
+    }
+
+    @from_new_html_where = 
+      lambda{|where|
+      lambda{|table_alias|
+        lambda{|table|
+          "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
+          "<tr><th>SELECT</th><td>*</td></tr>" +
+          "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>"+  table_alias + "</td></tr>" +
+          "<tr><th>WHERE</th><td>"+where+"</td></tr>" +
+        "</table></html>"
+        }
       }
     }
 
@@ -76,7 +97,7 @@ class SqlViewController < ApplicationController
     end
 
 
-
+    @table_alias = "foo_alias"
     @from_new_sql = @from_new.call(@table_alias).call(@table)
     from_new_html_string = @from_new_html.call(@table_alias).call(@table)
 
