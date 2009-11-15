@@ -54,7 +54,7 @@ class SqlViewController < ApplicationController
 
     @from_new_html = lambda{|table_alias|
       lambda{|table|
-        "<html><table xmlns='http://www.w3.org/1999/xhtml'>" +
+        "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
         "<tr><th>SELECT</th><td>*</td></tr>" +
         "<tr><th>FROM</th><td>"+table+" "+  table_alias + "</td></tr>" +
         "<tr><th>WHERE</th><td>"+table_alias+".c='v'</td></tr>" +
@@ -69,7 +69,17 @@ class SqlViewController < ApplicationController
       @table = @results_dbinfo[0]['name']
     end
 
-    @from_new_sql = @from_new.call("table_a").call(@table)
+    if (self.params["table_alias"])
+      @table_alias = self.params["table_alias"]
+    else
+      @table_alias = "table_a"
+    end
+
+
+
+    @from_new_sql = @from_new.call(@table_alias).call(@table)
+    from_new_html_string = @from_new_html.call(@table_alias).call(@table)
+
 
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
@@ -140,7 +150,7 @@ class SqlViewController < ApplicationController
       xml.new_sql(@from_new_sql)
 
       # @from_new_html
-      xml << @from_new_html.call("table_a").call(@table)
+      xml << from_new_html_string
 
       # <xml output part 1: actual payload: client query results>
       if @sql
@@ -156,7 +166,6 @@ class SqlViewController < ApplicationController
       end
 
       # </xml output part 1: actual payload: client query results>
-
 
       # <xml output part 2: metadata about entire database.>
       xml.metadata {

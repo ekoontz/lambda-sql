@@ -2,6 +2,7 @@
 <xsl:stylesheet 
     xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+    xmlns:tohtml="http://github.com/ekoontz/lambda-sql" 
     version="1.0">
 
   <xsl:include href="public/stylesheets/lambda_sql.xsl"/>
@@ -23,15 +24,21 @@
     <h2>SQL views</h2>
   </xsl:template>
 
-  <xsl:template match="html/*" mode="add_form_markup">
+  <xsl:template match="html" mode="add_form_markup">
     <div class="sql_form">
-      <xsl:copy-of select="."/>
+      <xsl:apply-templates select="tohtml:*"/>
     </div>
+  </xsl:template>
+
+  <xsl:template match="tohtml:*">
+    <xsl:element name="{name()}">
+      <xsl:apply-templates/>
+    </xsl:element>
   </xsl:template>
 
   <xsl:template match="view" mode="body">
     <form action="?" method="get">
-      <xsl:apply-templates select="html/*" mode="add_form_markup"/>
+      <xsl:apply-templates select="html" mode="add_form_markup"/>
       <pre>
 	<xsl:copy-of select="new_sql"/>
       </pre>
