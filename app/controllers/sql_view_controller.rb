@@ -24,11 +24,6 @@ class SqlViewController < ApplicationController
   end
 
   def index
-
-    # <build the kernel from the user's desired params.>
-    #  (we assume that the "table" param is defined to real table by the
-    #  time this function (the sql_view.index controller) is called.)
-    @table = self.params["table"]
     
     if (!self.params["joindir"])
       self.params["joindir"] = ""
@@ -65,6 +60,17 @@ class SqlViewController < ApplicationController
     tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
     @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
     # </get database metadata>
+
+    # <define the kernel from the user's desired params.>
+    #  (we assume that the "table" param is defined to real table by the
+    #  time this function (the sql_view.index controller) is called.)
+
+    if (self.params["table"])
+      @table = self.params["table"]
+    else
+      # if no table given, use first table from list of database tables.
+      @table = @results_dbinfo[0]['name']
+    end
     
     if (self.params["join1"] != '')
       kernel = @from.
@@ -75,19 +81,17 @@ class SqlViewController < ApplicationController
              " ON " + self.params["jc1"] + " = " + self.params["jc2"]
              )
     else
-
-      if (@table)
-      else
-        @table = "adjacent"
-      end
-      @table = "adjacent"
-      
-      kernel = @from.
-        call(
-             @table
-             )
+      kernel = @from.call(@table)
     end
-    # </build the kernel from the user's desired params.>
+    # </define the kernel function from the user's desired params.>
+
+    # <use the kernel to 
+    #  count the number of rows that would be returned this query (@sql) 
+    # without any LIMIT or OFFSET.>
+    @count_sql = "SELECT count(*) FROM (" + 
+      kernel.call("true").call("1")  + ") AS count"
+    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
+    # </count the number of rows..>
 
     # compose the actual SQL that will be sent to the database:
     if (self.params["offset"]) 
@@ -101,13 +105,6 @@ class SqlViewController < ApplicationController
     if (self.params["page"] == "beginning") 
       @offset = 0
     end
-
-    # <count the number of rows that would be returned this query (@sql) 
-    # without any LIMIT or OFFSET.>
-    @count_sql = "SELECT count(*) FROM (" + 
-      kernel.call("true").call("1")  + ") AS count"
-    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
-    # </count the number of rows..>
 
     if (self.params["page"] == "forward") 
       @offset = [@offset.to_i + 10,@count.to_i - (@count.to_i % 10)].min
