@@ -46,7 +46,7 @@ class SqlViewController < ApplicationController
         lambda{|select|
           "SELECT " + select +
           "  FROM " + from + 
-          " WHERE " + where 
+          " WHERE " + where
         }
       }
     }
@@ -72,6 +72,8 @@ class SqlViewController < ApplicationController
       @table = @results_dbinfo[0]['name']
     end
     
+    kernel = @from.call(@table)
+
     if (self.params["join1"] != '')
       kernel = @from.
         call(
@@ -80,8 +82,6 @@ class SqlViewController < ApplicationController
              self.params["join1"] + " AS table_b " + 
              " ON " + self.params["jc1"] + " = " + self.params["jc2"]
              )
-    else
-      kernel = @from.call(@table)
     end
     # </define the kernel function from the user's desired params.>
 
