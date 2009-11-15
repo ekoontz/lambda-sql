@@ -27,15 +27,10 @@
 
         <script type="text/javascript" src="/javascripts/prototype.js">
 	</script>
-        <script type="text/javascript" src="/javascripts/controls.js">
-	</script>
-        <script type="text/javascript" src="/javascripts/dragdrop.js">
-	</script>
-        <script type="text/javascript" src="/javascripts/effects.js">
-	</script>
         <script type="text/javascript" src="/javascripts/application.js">
 	</script>
-
+        <script type="text/javascript" src="/javascripts/jquery.js">
+	</script>
       </head>
       <body onload="{$onload}; onload_app();">
 	<div class="header">
@@ -73,7 +68,7 @@
   
   <xsl:template match="table" mode="link">
     <xsl:variable name="link"><xsl:choose>
-	<xsl:when test="$table">table=<xsl:value-of select="$table"/>&amp;join1=<xsl:value-of select="@name"/></xsl:when>
+	<xsl:when test="$table">table=<xsl:value-of select="@name"/>&amp;join1=<xsl:value-of select="@name"/></xsl:when>
 	<xsl:otherwise>table=<xsl:value-of select="@name"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
@@ -90,7 +85,7 @@
     <xsl:param name="filterby"/>
     <xsl:param name="form_input_name"/>
     <xsl:param name="table_alias"/>
-    <select name="{$form_input_name}" onchange="submit()">
+    <select name="{$form_input_name}">
       <xsl:copy-of select="$top"/>
       <xsl:apply-templates mode="option">
 	<xsl:with-param name="filterby" select="$filterby"/>

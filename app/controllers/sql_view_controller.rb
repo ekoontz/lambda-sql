@@ -25,6 +25,14 @@ class SqlViewController < ApplicationController
 
   def index
 
+    def join(table_a,table_b,join_type,condition1,condition2)
+      retval = table_a.to_s
+      if join_type
+        retval = retval + " " + join_type + " JOIN " + table_b + " ON " + condition1 + " = " + condition2
+      end
+      return retval
+    end
+
     @from = lambda{|from|
       lambda{|where|
         lambda{|select|
@@ -34,14 +42,6 @@ class SqlViewController < ApplicationController
         }
       }
     }
-
-    def join(table_a,table_b,join_type,condition1,condition2)
-      retval = table_a.to_s
-      if join_type
-        retval = retval + " " + join_type + " JOIN " + table_b + " ON " + condition1 + " = " + condition2
-      end
-      return retval
-    end
 
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
