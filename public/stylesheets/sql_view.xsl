@@ -26,21 +26,42 @@
 
   <xsl:template match="html" mode="add_form_markup">
     <div class="sql_form">
-      <xsl:apply-templates select="tohtml:*"/>
+      <form action="?">
+	<xsl:apply-templates select="tohtml:*"/>
+	<div class="submit"><input type="submit"/></div>
+      </form>
     </div>
   </xsl:template>
 
   <xsl:template match="tohtml:*">
-    <xsl:element name="{name()}">
-      <xsl:apply-templates/>
-    </xsl:element>
+    <!-- translate classes, form names and values in source, if any, to appropriate html markup. -->
+    <xsl:choose>
+      <xsl:when test="@class = 'fill-in'">
+	<xsl:element name="{name()}">
+	  <input value="{.}" name="{@name}"/>
+	</xsl:element>
+      </xsl:when>
+      <xsl:when test="@class = 'dropdown-tables'">
+	<xsl:element name="{name()}">
+	  <xsl:apply-templates select="ancestor::view/metadata/tables" mode="dropdown">
+	    <xsl:with-param name="form_input_name" select="'table'"/>
+	    <xsl:with-param name="selected" select="."/>
+	  </xsl:apply-templates>
+	</xsl:element>
+      </xsl:when>
+      <xsl:otherwise>
+	<xsl:element name="{name()}">
+	  <xsl:apply-templates/>
+	</xsl:element>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <xsl:template match="view" mode="body">
     <form action="?" method="get">
       <xsl:apply-templates select="html" mode="add_form_markup"/>
       <pre>
-	<xsl:copy-of select="new_sql"/>
+	<xsl:value-of select="new_sql"/>
       </pre>
       <div>
 	<table>

@@ -63,6 +63,15 @@ div.sql_form td {
 
 div.sql_form th {
     width:30%;
-    padding:0.25em;
+    padding:0.125em;
     text-align:right;
+}
+
+div.submit {
+    border:0;
+    background:transparent;
+    width:auto;
+    float:right;
+    padding:0;
+    margin:0;
 }

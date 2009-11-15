@@ -56,7 +56,7 @@ class SqlViewController < ApplicationController
       lambda{|table|
         "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
         "<tr><th>SELECT</th><td>*</td></tr>" +
-        "<tr><th>FROM</th><td>"+table+" "+  table_alias + "</td></tr>" +
+        "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>"+  table_alias + "</td></tr>" +
         "<tr><th>WHERE</th><td>"+table_alias+".c='v'</td></tr>" +
         "</table></html>"
       }
