@@ -37,7 +37,7 @@ select_no_join = lambda{|select,table,type,join_table,c1,c2|
       'inner','adjacent a','s.abbr','a.station_a')).
   call('inner','station b_stat','b_stat.abbr','a.station_b')
 
-
+# does not work yet.
 (select_no_join.
  call('s.name AS station_a,b_stat.name AS station_b','station s','inner').
   call('inner','adjacent a','s.abbr','a.station_a')).
