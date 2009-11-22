@@ -57,11 +57,15 @@ div.sql_form table {
 }
 
 div.sql_form td {
-    border:1px solid green;
+    width:auto;
+    border-bottom:1px dashed green;
+    border-right:1px dashed green;
+    border-top:1px dashed green;
     white-space:pre;
 }
 
 div.sql_form th {
+    background:#eee;
     width:30%;
     padding:0.125em;
     text-align:right;

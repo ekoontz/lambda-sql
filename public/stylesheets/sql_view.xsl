@@ -38,6 +38,7 @@
     <xsl:choose>
       <xsl:when test="@class = 'fill-in'">
 	<xsl:element name="{name()}">
+	  <xsl:attribute name="colspan">2</xsl:attribute>
 	  <input value="{.}" name="{@name}"/>
 	</xsl:element>
       </xsl:when>
@@ -46,6 +47,16 @@
 	  <xsl:apply-templates select="ancestor::view/metadata/tables" mode="dropdown">
 	    <xsl:with-param name="form_input_name" select="'table'"/>
 	    <xsl:with-param name="selected" select="."/>
+	  </xsl:apply-templates>
+	</xsl:element>
+      </xsl:when>
+      <xsl:when test="@class = 'dropdown-columns'">
+	<xsl:element name="{name()}">
+	  <xsl:apply-templates select="ancestor::view/metadata/columns" mode="dropdown">
+	    <xsl:with-param name="form_input_name" select="'column'"/>
+	    <xsl:with-param name="selected" select="."/>
+	    <xsl:with-param name="table_alias" select="@table_alias"/>
+	    <xsl:with-param name="filterby" select="@filterby"/>
 	  </xsl:apply-templates>
 	</xsl:element>
       </xsl:when>

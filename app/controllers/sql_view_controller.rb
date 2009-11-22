@@ -43,29 +43,43 @@ class SqlViewController < ApplicationController
       }
     }
 
+    @where_new = lambda{|value|
+      lambda{|table_alias|
+        lambda{|column|
+          table_alias + "." + column + " = '"+value+"'"
+        }
+      }
+    }
+
+    if (self.params["value"])
+      value = self.params["value"]
+    else
+      value = "foo"
+    end  
+
+    if (self.params["column"])
+      column = self.params["column"]
+    else
+      column = "foo_col"
+    end  
 
     @from_new = lambda{|table_alias|
       lambda{|table|
         "SELECT " + "*" + 
         "  FROM " + table + " " + table_alias + 
-        " WHERE " + table_alias + ".c = 'v'"
+        " WHERE " + @where_new.call(value).call(table_alias).call(column)
       }
     }
 
-    @where_condition = lambda{|alias1|
-      lambda{|col1|
-        lambda{|col2|
-          alias1+"."+col1 + " = " + col2
-        }
-      }
-    }
 
     @from_new_html = lambda{|table_alias|
       lambda{|table|
         "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
         "<tr><th>SELECT</th><td>*</td></tr>" +
-        "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>"+  table_alias + "</td></tr>" +
-        "<tr><th>WHERE</th><td>"+table_alias+".c='v'</td></tr>" +
+        "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>" +
+        table_alias + "</td></tr>" +
+        "<tr><th>WHERE</th><td table_alias='"+table_alias+"' filterby='"+table+"' class='dropdown-columns' name='column'>" + column + "</td><td>='</td><td class='fill-in' name='value'>" + 
+        value+"</td><td>'</td></tr>" +
         "</table></html>"
       }
     }
@@ -83,6 +97,17 @@ class SqlViewController < ApplicationController
       }
     }
 
+    # <get database metadata>
+    tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
+    tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
+    
+    tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
+
+    tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
+    @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
+    # </get database metadata>
+
+
     if (self.params["table"])
       @table = self.params["table"]
     else
@@ -96,21 +121,8 @@ class SqlViewController < ApplicationController
       @table_alias = "table_a"
     end
 
-
-    @table_alias = "foo_alias"
-    @from_new_sql = @from_new.call(@table_alias).call(@table)
+    from_new_sql = @from_new.call(@table_alias).call(@table)
     from_new_html_string = @from_new_html.call(@table_alias).call(@table)
-
-
-    # <get database metadata>
-    tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
-    tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
-    
-    tables_count_sql = "SELECT count(*) FROM (" + tables_query_kernel.call("1") + ") AS count"
-
-    tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
-    @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
-    # </get database metadata>
 
     # <define the kernel from the user's desired params.>
     #  (we assume that the "table" param is defined to real table by the
@@ -168,9 +180,11 @@ class SqlViewController < ApplicationController
     # fixme: add page load time (Time.now minus request_start_time)
     xml.view(:time => mytime)  {
 
-      xml.new_sql(@from_new_sql)
+      xml.new_sql(from_new_sql)
 
-      # @from_new_html
+      # note that we use "<<" rather than "." because
+      # from_new_html_string is itself xml that we want to 
+      # incorporate inside the main xml document.
       xml << from_new_html_string
 
       # <xml output part 1: actual payload: client query results>
