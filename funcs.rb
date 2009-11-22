@@ -18,6 +18,14 @@ select = lambda{|select,table,type,join_table,c1,c2|
   }
 }
 
+select_no_join = lambda{|select,table,type,join_table,c1,c2|
+  lambda{|other_type,other_join_table,other_c1,other_c2|
+    "SELECT " + select + " " +
+     " FROM " + table + " " +
+    type.upcase
+  }
+}
+
 (select.
  call('s.name AS station_a,b_stat.name AS station_b',
       'station s',
