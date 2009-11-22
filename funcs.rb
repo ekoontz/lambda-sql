@@ -5,39 +5,21 @@
 # Note: uses ruby 1.8 "lambda" syntax (not 1.9 "->" syntax)
 #
 
-from = lambda{|select,table|
-  "SELECT " + select + " FROM " + table
-}
-
-join_with_from = lambda{|type,join_table,c1,c2|
-  lambda{|func,select,table|
-    func.call(select,table) + 
-    " " + type.upcase + " JOIN " + join_table + " ON " + c1 + "=" + c2
-  }
-}
-
-join_with_from_no_select = lambda{|type,join_table,c1,c2|
+join = lambda{|type,join_table,c1,c2|
   type.upcase + " JOIN " + join_table + " ON " + c1 + "=" + c2
 }
 
-join_with_join = lambda{|type,join_table,c1,c2|
-  lambda{|other_type,other_join_table,other_c1,other_c2|
-    type.upcase + " JOIN " + join_table + " ON " + c1 + "=" + c2 + " " +
-    join_with_from.call(other_type,other_join_table,other_c1,other_c2).call(from,'s.name,b_stat.name','station s') + " "
-  }
-}
-
-join_with_join_select = lambda{|select,table,type,join_table,c1,c2|
+select = lambda{|select,table,type,join_table,c1,c2|
   lambda{|other_type,other_join_table,other_c1,other_c2|
     "SELECT " + select + " " +
      " FROM " + table + " " +
     type.upcase + " JOIN " + join_table + " ON " + c1 + "=" + c2 + " " +
-    join_with_from_no_select.call(other_type,other_join_table,other_c1,other_c2)
+    join.call(other_type,other_join_table,other_c1,other_c2)
   }
 }
 
-(join_with_join_select.
- call('s.name,b_stat.name',
+(select.
+ call('s.name AS station_a,b_stat.name AS station_b',
       'station s',
       'inner','adjacent a','s.abbr','a.station_a')).
   call('inner','station b_stat','b_stat.abbr','a.station_b')
