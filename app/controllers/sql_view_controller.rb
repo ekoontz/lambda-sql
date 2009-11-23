@@ -25,14 +25,6 @@ class SqlViewController < ApplicationController
 
   def index
 
-    def join(table_a,table_b,join_type,condition1,condition2)
-      retval = table_a.to_s
-      if join_type
-        retval = retval + " " + join_type + " JOIN " + table_b + " ON " + condition1 + " = " + condition2
-      end
-      return retval
-    end
-
     @from = lambda{|from|
       lambda{|where|
         lambda{|select|
@@ -63,40 +55,6 @@ class SqlViewController < ApplicationController
       column = "foo_col"
     end  
 
-    @from_new = lambda{|table_alias|
-      lambda{|table|
-        "SELECT " + "*" + 
-        "  FROM " + table + " " + table_alias + 
-        " WHERE " + @where_new.call(value).call(table_alias).call(column)
-      }
-    }
-
-
-    @from_new_html = lambda{|table_alias|
-      lambda{|table|
-        "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
-        "<tr><th>SELECT</th><td>*</td></tr>" +
-        "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>" +
-        table_alias + "</td></tr>" +
-        "<tr><th>WHERE</th><td table_alias='"+table_alias+"' filterby='"+table+"' class='dropdown-columns' name='column'>" + column + "</td><td>='</td><td class='fill-in' name='value'>" + 
-        value+"</td><td>'</td></tr>" +
-        "</table></html>"
-      }
-    }
-
-    @from_new_html_where = 
-      lambda{|where|
-      lambda{|table_alias|
-        lambda{|table|
-          "<html><table xmlns='http://github.com/ekoontz/lambda-sql'>" +
-          "<tr><th>SELECT</th><td>*</td></tr>" +
-          "<tr><th>FROM</th><td name='table' class='dropdown-tables'>"+table+"</td><td class='fill-in' name='table_alias'>"+  table_alias + "</td></tr>" +
-          "<tr><th>WHERE</th><td>"+where+"</td></tr>" +
-        "</table></html>"
-        }
-      }
-    }
-
     # <get database metadata>
     tables_query_kernel = @from.call("information_schema.tables").call("(table_schema != 'information_schema') AND (table_schema != 'pg_catalog')")
     tables_sql = tables_query_kernel.call("table_schema AS schema,table_name AS name") + " ORDER BY table_name"
@@ -106,7 +64,6 @@ class SqlViewController < ApplicationController
     tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
     @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
     # </get database metadata>
-
 
     if (self.params["table"])
       @table = self.params["table"]
@@ -121,26 +78,40 @@ class SqlViewController < ApplicationController
       @table_alias = "table_a"
     end
 
-    from_new_sql = @from_new.call(@table_alias).call(@table)
-    from_new_html_string = @from_new_html.call(@table_alias).call(@table)
+    select3 = lambda{|select,table,joins|
+      "SELECT " + select + " " +
+      " FROM " + table + " " +
+      joins
+    }
 
-    # <define the kernel from the user's desired params.>
-    #  (we assume that the "table" param is defined to real table by the
-    #  time this function (the sql_view.index controller) is called.)
+    join = lambda{|type,table,c1,c2|
+      type.upcase + " JOIN " + table + " ON " + c1 + " = " + c2
+    }
+
+    join3 = lambda{|select_cols|
+      lambda{|table_a,alias_a,
+        table_b,alias_b,
+        table_c,alias_c|
+        lambda{|jc_a1,jc_b1,jc_b2,jc_c2|
+          select3.call(select_cols,
+                      table_a + ' ' + alias_a,
+                      join.call('inner',table_b+' '+alias_b,alias_a+'.'+jc_a1,alias_b+'.'+jc_b1) + ' ' +
+                      join.call('inner',table_c+' '+alias_c,alias_c+'.'+jc_b2,alias_b+'.'+jc_c2))
+        }
+      }
+    }
     
-    kernel = 
-      @from.call(
-                 join(@table,
-                      self.params["join1"],self.params["joindir"],self.params["jc1"],self.params["jc2"])
-                 )
+    @from_new_sql = join3.call(@table_alias+'.name AS station_a,b_station.name AS station_b').
+      call('station',@table_alias,
+           'adjacent','adj',
+           'station','b_station').call('abbr','station_a','abbr','station_b')
 
-    # </define the kernel function from the user's desired params.>
-
-    # <use the kernel to 
-    #  count the number of rows that would be returned this query.
-    # without any LIMIT or OFFSET.>
     @count_sql = "SELECT count(*) FROM (" + 
-      kernel.call("true").call("1")  + ") AS count"
+      join3.call('1').
+      call('station',@table_alias,
+           'adjacent','adj',
+           'station','b_station').call('abbr','station_a','abbr','station_b') + ") AS count"
+
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
     # </count the number of rows..>
 
@@ -167,7 +138,12 @@ class SqlViewController < ApplicationController
     @limit = 10
 
     # compose the actual SQL that will be sent to the database:
-    @sql = kernel.call("true").call("*") + " OFFSET " + @offset.to_s + " LIMIT " + @limit.to_s
+    @sql = 
+      join3.call(@table_alias+'.name AS station_a,b_station.name AS station_b').
+      call('station',@table_alias,
+           'adjacent','adj',
+           'station','b_station').call('abbr','station_a','abbr','station_b') +
+      " OFFSET " + @offset.to_s + " LIMIT " + @limit.to_s
 
     # DO THE ACTUAL QUERY.
     @results = ActiveRecord::Base.connection.execute(@sql)
@@ -175,6 +151,9 @@ class SqlViewController < ApplicationController
     # <build the xml output.>
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
+
+    from_new_sql = "(none)"
+    from_new_html_string = "<h1>test</h1>"
 
     mytime = Time.now
     # fixme: add page load time (Time.now minus request_start_time)

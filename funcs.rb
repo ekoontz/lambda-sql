@@ -5,41 +5,41 @@
 # Note: uses ruby 1.8 "lambda" syntax (not 1.9 "->" syntax)
 #
 
-join = lambda{|type,join_table,c1,c2|
-  type.upcase + " JOIN " + join_table + " ON " + c1 + "=" + c2
+select = lambda{|select,table,joins|
+  "SELECT " + select + " " +
+  " FROM " + table + " " +
+  joins
 }
 
-select = lambda{|select,table,type,join_table,c1,c2|
-  lambda{|other_type,other_join_table,other_c1,other_c2|
-    "SELECT " + select + " " +
-     " FROM " + table + " " +
-    type.upcase + " JOIN " + join_table + " ON " + c1 + "=" + c2 + " " +
-    join.call(other_type,other_join_table,other_c1,other_c2)
+join = lambda{|type,table,c1,c2|
+  type.upcase + " JOIN " + table + " ON " + c1 + " = " + c2
+}
+                           
+
+
+join3_sql = lambda{|select_cols|
+  lambda{|table_a,alias_a,
+    table_b,alias_b,
+    table_c,alias_c|
+    lambda{|jc_a1,jc_b1,jc_b2,jc_c2|
+      select.call(select_cols,
+                  table_a + ' ' + alias_a,
+                  join.call('inner',table_b+' '+alias_b,alias_a+'.'+jc_a1,alias_b+'.'+jc_b1) + ' ' +
+                  join.call('inner',table_c+' '+alias_c,alias_c+'.'+jc_b2,alias_b+'.'+jc_c2))
+    }
   }
 }
 
-select_no_join = lambda{|select,table,type|
-  if (type)
-    lambda{|type,join_table,c1,c2|
-      "SELECT " + select + " " +
-      " FROM " + table + " " +
-      join.call(type,join_table,c1,c2)
-    }
-  else
-    "SELECT " + select + " " +
-      " FROM " + table + " "
-  end
-}
+@table_alias = 'foo'
 
-(select.
- call('s.name AS station_a,b_stat.name AS station_b',
-      'station s',
-      'inner','adjacent a','s.abbr','a.station_a')).
-  call('inner','station b_stat','b_stat.abbr','a.station_b')
+from_new_sql = join3_sql.call(@table_alias+'.name AS station_a,b_station.name AS station_b').
+  call('station',@table_alias,
+       'adjacent','adj',
+       'station','b_station').call('abbr','station_a','abbr','station_b')
 
-(select_no_join.
- call('s.name AS station_a,b_stat.name AS station_b','station s','inner').
-  call('inner','adjacent a','s.abbr','a.station_a'))
+
+  
+
 
 
 
