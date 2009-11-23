@@ -35,14 +35,6 @@ class SqlViewController < ApplicationController
       }
     }
 
-    @where_new = lambda{|value|
-      lambda{|table_alias|
-        lambda{|column|
-          table_alias + "." + column + " = '"+value+"'"
-        }
-      }
-    }
-
     if (self.params["value"])
       value = self.params["value"]
     else
