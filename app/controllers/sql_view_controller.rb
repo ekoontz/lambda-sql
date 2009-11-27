@@ -70,44 +70,18 @@ class SqlViewController < ApplicationController
       @table_alias = "table_a"
     end
 
-    select3 = lambda{|select,table,joins|
-      "SELECT " + select + " " +
-      " FROM " + table + " " +
-      joins
-    }
-
-    join = lambda{|type,table,c1,c2|
-      type.upcase + " JOIN " + table + " ON " + c1 + " = " + c2
-    }
-
-    join3 = lambda{|select_cols|
-      lambda{|table_a,alias_a,
-        table_b,alias_b,
-        table_c,alias_c|
-        lambda{|jc_a1,jc_b1,jc_b2,jc_c2|
-          select3.call(select_cols,
-                      table_a + ' ' + alias_a,
-                      join.call('inner',table_b+' '+alias_b,alias_a+'.'+jc_a1,alias_b+'.'+jc_b1) + ' ' +
-                      join.call('inner',table_c+' '+alias_c,alias_c+'.'+jc_b2,alias_b+'.'+jc_c2))
-        }
-      }
-    }
-    
-    @from_new_sql = join3.call(@table_alias+'.name AS station_a,b_station.name AS station_b').
-      call('station',@table_alias,
-           'adjacent','adj',
-           'station','b_station').call('abbr','station_a','abbr','station_b')
-
-    @count_sql = "SELECT count(*) FROM (" + 
-      join3.call('1').
-      call('station',@table_alias,
-           'adjacent','adj',
-           'station','b_station').call('abbr','station_a','abbr','station_b') + ") AS count"
-
-    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
-    # </count the number of rows..>
-
     @offset = self.params["offset"].to_i
+
+    @limit = 10
+
+    expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
+    # compose the actual SQL that will be sent to the database:
+    @sql = eval(expr).call(@table)
+
+
+    @count_sql = "SELECT count(*) FROM ( " + @sql + ") AS ct"
+    # GET COUNTS.
+    @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
 
     # <paging>
     if (self.params["page"] == "beginning") 
@@ -127,15 +101,8 @@ class SqlViewController < ApplicationController
     end
     # </paging>
 
-    @limit = 10
-
-    # compose the actual SQL that will be sent to the database:
-    @sql = 
-      join3.call(@table_alias+'.name AS station_a,b_station.name AS station_b').
-      call('station',@table_alias,
-           'adjacent','adj',
-           'station','b_station').call('abbr','station_a','abbr','station_b') +
-      " OFFSET " + @offset.to_s + " LIMIT " + @limit.to_s
+    #add offsets and limits based on paging.
+    @sql = eval(expr).call(@table) + " LIMIT 10 OFFSET " + @offset.to_s
 
     # DO THE ACTUAL QUERY.
     @results = ActiveRecord::Base.connection.execute(@sql)
@@ -144,14 +111,13 @@ class SqlViewController < ApplicationController
     @xml = ""
     xml = Builder::XmlMarkup.new(:target => @xml, :indent => 2 )
 
-    from_new_sql = "(none)"
-    from_new_html_string = "<h1>test</h1>"
+    from_new_html_string = "<h1>HTML FORM of expression..</h1>"
 
     mytime = Time.now
     # fixme: add page load time (Time.now minus request_start_time)
     xml.view(:time => mytime)  {
 
-      xml.new_sql(from_new_sql)
+      xml.expression(expr)
 
       # note that we use "<<" rather than "." because
       # from_new_html_string is itself xml that we want to 
@@ -225,6 +191,12 @@ class SqlViewController < ApplicationController
       if @table 
         xslt.parameters = {
           "table" => @table
+        }
+      end
+
+      if @table_alias
+        xslt.parameters = {
+          "table_alias" => @table_alias
         }
       end
       

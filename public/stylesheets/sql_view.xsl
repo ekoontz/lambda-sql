@@ -7,6 +7,8 @@
 
   <xsl:include href="public/stylesheets/lambda_sql.xsl"/>
 
+  <xsl:param name="table_alias"/>
+
   <xsl:template match="*" mode="page_specific_meta">
     <link href="/stylesheets/sql_view.css"
 	  media="screen" rel="stylesheet" type="text/css" />
@@ -71,9 +73,7 @@
   <xsl:template match="view" mode="body">
     <form action="?" method="get">
       <xsl:apply-templates select="html" mode="add_form_markup"/>
-      <pre>
-	<xsl:value-of select="new_sql"/>
-      </pre>
+
       <div>
 	<table>
 	  <tr>
@@ -83,7 +83,7 @@
 		<xsl:with-param name="selected" select="metadata/params/@table"/>
 	      </xsl:apply-templates>
 	    </td>
-	    <td>table_a</td>
+	    <td><input name="table_alias" value="{$table_alias}"/></td>
 	    <td>
 	      <xsl:apply-templates select="metadata/joindirs" mode="dropdown">
 		<xsl:with-param name="top">
@@ -92,6 +92,9 @@
 		<xsl:with-param name="form_input_name" select="'joindir'"/>
 		<xsl:with-param name="selected" select="metadata/params/@joindir"/>
 	      </xsl:apply-templates>
+	    </td>
+	    <td>
+	      <input type="submit"/>
 	    </td>
 	  </tr>
 	</table>

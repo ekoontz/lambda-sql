@@ -16,8 +16,8 @@ div {
 }
 
 div.pre {
-    height:1em;
-    overfloat:scroll;
+    height:2em;
+    overflow:scroll;
     background:#ccc;
 }
 
