@@ -107,7 +107,9 @@ class SqlViewController < ApplicationController
     end
 
     if (@expression_id == '9')
-      @sql = @sql.call("SELECT * FROM station foo")
+      # use simple_select as the 2nd (inner) function for application.
+      sel_expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
+      @sql = @sql.call(eval(sel_expr).call('station fooz'))
     end
 
 
