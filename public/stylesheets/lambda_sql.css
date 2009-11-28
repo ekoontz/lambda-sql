@@ -1,42 +1,42 @@
 /* <color definitions> */
 .color_a {
-    background:#f2eb40;
+    background:#ffcfbd;
 }
 
 .color_b {
-    background:#ccc735;
+    background:#d9add7
 }
 
 .color_c {
-    background:#a6a22b;
+    background:#b38fb1;
 }
 
 .color_d {
-    background:#6b98bf;
+    background:#ff66c7;
 }
 
 .color_e {
-    background:#e9eef2;
+    background:#d957a9;
 }
 
 h2 {
-    background:#e9eef2;
+    background:#ff66c7;
 }
 
 body {
-    background:#a6a22b;
+    background:#d9add7;
 }
 
 .row_1 {
-    background:#6b98bf;
+    background:#b38fb1;
 }
 
 .row_0 {
-    background:#e9eef2;
+    background:#ff66c7;
 }
 
 .section {
-    background:#ccc735;
+    background:#d957a9;
 }
 
 /* </color definitions> */
