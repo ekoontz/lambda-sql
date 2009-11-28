@@ -10,6 +10,7 @@
 
   <xsl:param name="format"/>
   <xsl:param name="table"/>
+  <xsl:param name="expression_id"/>
 
   <xsl:include href="table.xsl"/>
 
@@ -69,7 +70,7 @@
   <xsl:template match="table" mode="link">
     <xsl:variable name="link"><xsl:choose>
 	<xsl:when test="$table">table=<xsl:value-of select="@name"/>&amp;join1=<xsl:value-of select="@name"/></xsl:when>
-	<xsl:otherwise>table=<xsl:value-of select="@name"/></xsl:otherwise>
+	<xsl:otherwise>table=<xsl:value-of select="@name"/>&amp;expression_id=<xsl:value-of select="$expression_id"/></xsl:otherwise>
       </xsl:choose>
     </xsl:variable>
     <a href="?{$link}"><xsl:value-of select="@name"/></a>
@@ -135,5 +136,10 @@
   </xsl:template>
 
 
+  <xsl:template match="expression/@id" mode="td">
+    <td>
+      <a href="?expression_id={.}"><xsl:value-of select="."/></a>
+    </td>
+  </xsl:template>
 
 </xsl:stylesheet>

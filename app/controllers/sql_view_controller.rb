@@ -83,13 +83,32 @@ class SqlViewController < ApplicationController
     @expression_id = self.params["expression_id"]
 
     if @expression_id
-      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE id=$$" + @expression_id  + "$$")[0]['string']
+      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE id=$$" + @expression_id  + "$$")[0]
+      expr_string = expr['string']
+      expr_arity = expr['arity']
     else
       # just get first.
-      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
+      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]
+      expr_string = expr['string']
+      expr_arity = expr['arity']
     end  
     # compose the actual SQL that will be sent to the database:
-    @sql = eval(expr).call(@table)
+    foojoin = 'station s ON (1 = 1)'
+
+
+    if (expr_arity == '1')
+      @sql = eval(expr_string).call(@table)
+    else
+      if (expr_arity == '2')
+        @sql = eval(expr_string).call(@table,foojoin)
+      else
+        # ...
+      end
+    end
+
+    if (@expression_id == '9')
+      @sql = @sql.call("SELECT * FROM station foo")
+    end
 
 
     # get total number of rows in query result.
@@ -115,10 +134,21 @@ class SqlViewController < ApplicationController
     # </paging>
 
     #add offsets and limits based on paging.
-    @sql = eval(expr).call(@table) + " LIMIT 10 OFFSET " + @offset.to_s
 
     # DO THE ACTUAL QUERY.
-    @results = ActiveRecord::Base.connection.execute(@sql)
+    if (expr_arity == '1')
+      @sql = @sql + " LIMIT 10 OFFSET " + @offset.to_s
+    else
+      if (expr_arity == '2')
+        @sql = @sql + " LIMIT 10 OFFSET " + @offset.to_s
+      end
+    end
+
+    begin
+      @results = ActiveRecord::Base.connection.execute(@sql)
+    rescue
+      @results = ActiveRecord::Base.connection.execute("SELECT '"+error+"' AS error,$$"+ @sql +"$$ AS sql")
+    end
 
     # <build the xml output.>
     @xml = ""
@@ -130,7 +160,7 @@ class SqlViewController < ApplicationController
     # fixme: add page load time (Time.now minus request_start_time)
     xml.view(:time => mytime)  {
 
-      xml.expression(expr)
+      xml.expression(expr_string)
 
       # note that we use "<<" rather than "." because
       # from_new_html_string is itself xml that we want to 
@@ -219,6 +249,12 @@ class SqlViewController < ApplicationController
       if @table_alias
         xslt.parameters = {
           "table_alias" => @table_alias
+        }
+      end
+
+      if @expression_id 
+        xslt.parameters = {
+          "expression_id" => @expression_id
         }
       end
       
