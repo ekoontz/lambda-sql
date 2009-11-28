@@ -112,6 +112,7 @@
       <xsl:apply-templates select="@id" mode="th"/>
       <xsl:apply-templates select="@arity" mode="th"/>
       <xsl:apply-templates select="@string" mode="th"/>
+      <xsl:apply-templates select="@form_code" mode="th"/>
       <xsl:apply-templates select="@comment" mode="th"/>
     </tr>
   </xsl:template>
@@ -131,6 +132,7 @@
       <xsl:apply-templates select="@id" mode="td"/>
       <xsl:apply-templates select="@arity" mode="td"/>
       <xsl:apply-templates select="@string" mode="td"/>
+      <xsl:apply-templates select="@form_code" mode="td"/>
       <xsl:apply-templates select="@comment" mode="td"/>
     </tr>
   </xsl:template>

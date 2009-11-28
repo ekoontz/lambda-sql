@@ -83,7 +83,13 @@
 
       <div class="section">
 	<h2>Selector</h2>
-	<table>
+	<div>
+	  <form action="?" method="get">
+	    <xsl:apply-templates select="form_code"/>
+	  </form>
+	</div>
+
+	<table style="display:none">
 	  <tr>
 	    <td>
 	      <xsl:apply-templates select="metadata/tables" mode="dropdown">
@@ -246,20 +252,26 @@
   </xsl:template>
 
   <xsl:template match="@string" mode="th">
-    <th style="text-align:center;width:80%">
+    <th style="text-align:center;width:60%">
       string
     </th>
   </xsl:template>
 
+  <xsl:template match="@form_code" mode="th">
+    <th style="text-align:center;width:60%">
+      form
+    </th>
+  </xsl:template>
+
   <xsl:template match="@expression_id" mode="td">
-    <td style="width:15%;text-align:right">
+    <td style="text-align:right">
       	<xsl:value-of select="."/>
     </td>
   </xsl:template>
 
-  <xsl:template match="@string" mode="td">
-    <td style="width:80%">
-      <div style="white-space: pre;font-family:monospace">
+  <xsl:template match="@string|@form_code" mode="td">
+    <td>
+      <div style="font-family:monospace">
 	<xsl:value-of select="."/>
       </div>
     </td>
@@ -281,6 +293,31 @@
       </xsl:if>
       <xsl:value-of select="@name"/> JOIN ...
     </option>
+  </xsl:template>
+
+  <xsl:template match="form_code">
+    <xsl:apply-templates/>
+  </xsl:template>
+
+  <xsl:template match="form_code/join">
+    <div class="form_code_elem">
+      <table>
+	<tr>
+	  <td>
+	    INNER JOIN 
+	  </td>
+	  <td>
+	    <xsl:apply-templates select="ancestor::view/metadata/tables" mode="dropdown">
+	      <xsl:with-param name="form_input_name" select="'table'"/>
+	      <xsl:with-param name="selected" select="@selected"/>
+	    </xsl:apply-templates>
+
+	  </td>
+	  <td>ON</td>
+	  <td>(1 = 1)</td>
+	</tr>
+      </table>
+    </div>
   </xsl:template>
 
 </xsl:stylesheet>

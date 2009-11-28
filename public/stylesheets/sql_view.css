@@ -79,3 +79,16 @@ div.submit {
     padding:0;
     margin:0;
 }
+
+div.form_code_elem {
+    padding:3px;
+    border:1px solid black;
+}
+
+div.form_code_elem table {
+    border:0px;
+}
+
+div.form_code_elem td {
+    border:0px;
+}

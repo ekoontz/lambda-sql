@@ -44,7 +44,7 @@ class SqlViewController < ApplicationController
     tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
     @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
 
-    expressions_sql = "SELECT id,arity,string,comment FROM expression"
+    expressions_sql = "SELECT id,arity,string,form_code,comment FROM expression"
     expressions_count_sql = "SELECT count(*) FROM (" + expressions_sql + ") AS count"
     expressions_count = ActiveRecord::Base.connection.execute(expressions_count_sql)[0]['count']
     @expressions_dbinfo = ActiveRecord::Base.connection.execute(expressions_sql)
@@ -84,22 +84,23 @@ class SqlViewController < ApplicationController
 
     if @expression_id
       expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE id=$$" + @expression_id  + "$$")[0]
-      expr_string = expr['string']
-      expr_arity = expr['arity']
     else
       # just get first.
       expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]
-      expr_string = expr['string']
-      expr_arity = expr['arity']
     end  
-    # compose the actual SQL that will be sent to the database:
-    foojoin = 'station s ON (1 = 1)'
 
+    expr_string = expr['string']
+    expr_arity = expr['arity']
+    form_code = expr['form_code']
+    form_code = eval(form_code).call(@table)
+
+    # compose the actual SQL that will be sent to the database:
 
     if (expr_arity == '1')
       @sql = eval(expr_string).call(@table)
     else
       if (expr_arity == '2')
+        foojoin = 'station s ON (1 = 1)'
         @sql = eval(expr_string).call(@table,foojoin)
       else
         # ...
@@ -108,10 +109,10 @@ class SqlViewController < ApplicationController
 
     if (@expression_id == '9')
       # use simple_select as the 2nd (inner) function for application.
-      sel_expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
+      sel_expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE comment=$$simple$$")[0]['string']
       @sql = @sql.call(eval(sel_expr).call('station fooz'))
+      form_code = form_code.call('station fooz')
     end
-
 
     # get total number of rows in query result.
     @count_sql = "SELECT count(*) FROM ( " + @sql + ") AS ct"
@@ -149,7 +150,7 @@ class SqlViewController < ApplicationController
     begin
       @results = ActiveRecord::Base.connection.execute(@sql)
     rescue
-      @results = ActiveRecord::Base.connection.execute("SELECT '"+error+"' AS error,$$"+ @sql +"$$ AS sql")
+      @results = ActiveRecord::Base.connection.execute("SELECT sql_error AS error, $$" + @sql + "$$ AS sql")
     end
 
     # <build the xml output.>
@@ -168,6 +169,8 @@ class SqlViewController < ApplicationController
       # from_new_html_string is itself xml that we want to 
       # incorporate inside the main xml document.
       xml << from_new_html_string
+      # same with form_code.
+      xml << "<form_code>" + form_code + "</form_code>"
 
       # <xml output part 1: actual payload: client query results>
       if @sql
