@@ -43,6 +43,12 @@ class SqlViewController < ApplicationController
 
     tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
     @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
+
+    expressions_sql = "SELECT * FROM expression"
+    expressions_count_sql = "SELECT count(*) FROM (" + expressions_sql + ") AS count"
+    expressions_count = ActiveRecord::Base.connection.execute(expressions_count_sql)[0]['count']
+    @expressions_dbinfo = ActiveRecord::Base.connection.execute(expressions_sql)
+
     # </get database metadata>
 
     if (self.params["value"])
@@ -74,16 +80,23 @@ class SqlViewController < ApplicationController
 
     @limit = 10
 
-    expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
+    @expression_id = self.params["expression_id"]
+
+    if @expression_id
+      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE expression_id=$$" + @expression_id  + "$$")[0]['string']
+    else
+      # just get first.
+      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
+    end  
     # compose the actual SQL that will be sent to the database:
     @sql = eval(expr).call(@table)
 
 
+    # get total number of rows in query result.
     @count_sql = "SELECT count(*) FROM ( " + @sql + ") AS ct"
-    # GET COUNTS.
     @count = ActiveRecord::Base.connection.execute(@count_sql)[0]['count']
 
-    # <paging>
+    # <paging: requires knowing the total number of rows in query result>
     if (self.params["page"] == "beginning") 
       @offset = 0
     end
@@ -149,6 +162,15 @@ class SqlViewController < ApplicationController
           xml.joindir(:name => "LEFT")
           xml.joindir(:name => "RIGHT")
           xml.joindir(:name => "INNER")
+        }
+
+
+        xml.expressions(:sql => expressions_sql,
+                   :count => expressions_count
+                   ) {
+          @expressions_dbinfo.each do |r| 
+            xml.expression(r)
+          end
         }
 
         xml.tables(:sql => tables_sql,

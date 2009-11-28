@@ -75,6 +75,12 @@
       <xsl:apply-templates select="html" mode="add_form_markup"/>
 
       <div>
+	<xsl:apply-templates select="metadata/expressions" mode="table">
+	  <xsl:with-param name="prefix">expression</xsl:with-param>
+	</xsl:apply-templates>
+      </div>
+
+      <div>
 	<table>
 	  <tr>
 	    <td>
@@ -225,6 +231,32 @@
       <xsl:with-param name="offset"><xsl:value-of select="$offset + 1"/></xsl:with-param>
     </xsl:apply-templates>
 
+  </xsl:template>
+
+  <xsl:template match="@expression_id" mode="th">
+    <th style="width:15%;text-align:right">
+      expression_id
+    </th>
+  </xsl:template>
+
+  <xsl:template match="@string" mode="th">
+    <th style="text-align:center;width:80%">
+      string
+    </th>
+  </xsl:template>
+
+  <xsl:template match="@expression_id" mode="td">
+    <td style="width:15%;text-align:right">
+      	<xsl:value-of select="."/>
+    </td>
+  </xsl:template>
+
+  <xsl:template match="@string" mode="td">
+    <td style="width:80%">
+      <div style="white-space: pre;font-family:monospace">
+	<xsl:value-of select="."/>
+      </div>
+    </td>
   </xsl:template>
 
   <xsl:template match="column" mode="option">
