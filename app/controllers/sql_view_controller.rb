@@ -44,7 +44,7 @@ class SqlViewController < ApplicationController
     tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
     @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
 
-    expressions_sql = "SELECT * FROM expression"
+    expressions_sql = "SELECT expression_id,arity,string,comment FROM expression"
     expressions_count_sql = "SELECT count(*) FROM (" + expressions_sql + ") AS count"
     expressions_count = ActiveRecord::Base.connection.execute(expressions_count_sql)[0]['count']
     @expressions_dbinfo = ActiveRecord::Base.connection.execute(expressions_sql)
