@@ -1,5 +1,47 @@
+/* <color definitions> */
+.color_a {
+    background:#f2eb40;
+}
+
+.color_b {
+    background:#ccc735;
+}
+
+.color_c {
+    background:#a6a22b;
+}
+
+.color_d {
+    background:#6b98bf;
+}
+
+.color_e {
+    background:#e9eef2;
+}
+
+h2 {
+    background:#e9eef2;
+}
+
 body {
-    background:white;
+    background:#a6a22b;
+}
+
+.row_1 {
+    background:#6b98bf;
+}
+
+.row_0 {
+    background:#e9eef2;
+}
+
+.section {
+    background:#ccc735;
+}
+
+/* </color definitions> */
+
+body {
     font-family:sans-serif;
 }
 
@@ -9,7 +51,6 @@ a {
 }
 
 div {
-    background: #dddfe3;
     border:1px solid black;
     margin:0.25em;
     padding:0.75em;
@@ -22,11 +63,10 @@ div.pre {
 }
 
 h2 {
-    float:right;
-    width:auto;
-    padding:0.5em;
+    position:relative;
+    padding:0.125em;
+    top:0;
     border:1px solid blue;
-    background:#fff;
 }
 
 table {
@@ -40,19 +80,18 @@ thead tr {
 }
 
 thead th {
-    background: #bda6b5;
     border-bottom:1px solid black;
 }
 
 tr.row_0 {
-    background: #bda6b5;
 }
 
 tr.row_1 {
-    background: #f4f5f6;
 }
 
 form table {
+    padding:0;
+    margin:0;
     width:auto;
 }
 

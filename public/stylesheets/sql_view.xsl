@@ -27,7 +27,7 @@
   </xsl:template>
 
   <xsl:template match="html" mode="add_form_markup">
-    <div class="sql_form">
+    <div class="sql_form color_a">
       <form action="?">
 	<xsl:apply-templates select="tohtml:*"/>
 	<div class="submit"><input type="submit"/></div>
@@ -74,13 +74,15 @@
     <form action="?" method="get">
       <xsl:apply-templates select="html" mode="add_form_markup"/>
 
-      <div>
+      <div class="section">
+	<h2>Expressions</h2>
 	<xsl:apply-templates select="metadata/expressions" mode="table">
 	  <xsl:with-param name="prefix">expression</xsl:with-param>
 	</xsl:apply-templates>
       </div>
 
-      <div>
+      <div class="section">
+	<h2>Selector</h2>
 	<table>
 	  <tr>
 	    <td>
@@ -157,10 +159,15 @@
       </div>
     </form>
 
-    <div>
+    <div class="section">
+      <h2>SQL</h2>
       <div class="pre">
 	<xsl:value-of select="rows/@sql"/>
       </div>
+    </div>
+
+    <div class="section">
+      <h2>Results</h2>
 	
       <xsl:apply-templates select="rows" mode="table">
 	<xsl:with-param name="inputs">
@@ -176,7 +183,6 @@
 	</xsl:with-param>
 
       </xsl:apply-templates>
-
     </div>
   </xsl:template>
 

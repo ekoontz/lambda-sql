@@ -105,4 +105,35 @@
     </option>
   </xsl:template>
 
+  <xsl:template match="expression" mode="thead">
+    <tr>
+      <th/>
+      <xsl:apply-templates select="@id" mode="th"/>
+      <xsl:apply-templates select="@arity" mode="th"/>
+      <xsl:apply-templates select="@string" mode="th"/>
+      <xsl:apply-templates select="@comment" mode="th"/>
+    </tr>
+  </xsl:template>
+
+  <xsl:template match="expression" mode="tbody">
+    <xsl:variable name="offset">
+      <xsl:choose>
+	<xsl:when test="ancestor-or-self::*[@offset]/@offset">
+	  <xsl:value-of select="ancestor-or-self::*[@offset]/@offset"/>
+	</xsl:when>
+	<xsl:otherwise>0</xsl:otherwise>
+      </xsl:choose>
+    </xsl:variable>
+    <tr class="row row_{position() mod 2}">
+      <th>
+	<xsl:value-of select="position() + $offset"/></th>
+      <xsl:apply-templates select="@id" mode="td"/>
+      <xsl:apply-templates select="@arity" mode="td"/>
+      <xsl:apply-templates select="@string" mode="td"/>
+      <xsl:apply-templates select="@comment" mode="td"/>
+    </tr>
+  </xsl:template>
+
+
+
 </xsl:stylesheet>

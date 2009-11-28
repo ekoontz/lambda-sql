@@ -44,7 +44,7 @@ class SqlViewController < ApplicationController
     tables_count = ActiveRecord::Base.connection.execute(tables_count_sql)[0]['count']
     @results_dbinfo = ActiveRecord::Base.connection.execute(tables_sql)
 
-    expressions_sql = "SELECT expression_id,arity,string,comment FROM expression"
+    expressions_sql = "SELECT id,arity,string,comment FROM expression"
     expressions_count_sql = "SELECT count(*) FROM (" + expressions_sql + ") AS count"
     expressions_count = ActiveRecord::Base.connection.execute(expressions_count_sql)[0]['count']
     @expressions_dbinfo = ActiveRecord::Base.connection.execute(expressions_sql)
@@ -83,7 +83,7 @@ class SqlViewController < ApplicationController
     @expression_id = self.params["expression_id"]
 
     if @expression_id
-      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE expression_id=$$" + @expression_id  + "$$")[0]['string']
+      expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE id=$$" + @expression_id  + "$$")[0]['string']
     else
       # just get first.
       expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression")[0]['string']
