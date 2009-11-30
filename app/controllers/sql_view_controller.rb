@@ -48,7 +48,6 @@ class SqlViewController < ApplicationController
     expressions_count_sql = "SELECT count(*) FROM (" + expressions_sql + ") AS count"
     expressions_count = ActiveRecord::Base.connection.execute(expressions_count_sql)[0]['count']
     @expressions_dbinfo = ActiveRecord::Base.connection.execute(expressions_sql)
-
     # </get database metadata>
 
     if (self.params["value"])
@@ -110,8 +109,8 @@ class SqlViewController < ApplicationController
     if (@expression_id == '9')
       # use simple_select as the 2nd (inner) function for application.
       sel_expr = ActiveRecord::Base.connection.execute("SELECT * FROM expression WHERE comment=$$simple$$")[0]['string']
-      @sql = @sql.call(eval(sel_expr).call('station fooz'))
-      form_code = form_code.call('station fooz')
+      @sql = @sql.call(eval(sel_expr).call('expression'))
+      form_code = form_code.call('station')
     end
 
     # get total number of rows in query result.
@@ -150,7 +149,7 @@ class SqlViewController < ApplicationController
     begin
       @results = ActiveRecord::Base.connection.execute(@sql)
     rescue
-      @results = ActiveRecord::Base.connection.execute("SELECT sql_error AS error, $$" + @sql + "$$ AS sql")
+      @results = ActiveRecord::Base.connection.execute("SELECT $$sql_error$$ AS error, $$" + @sql + "$$ AS sql")
     end
 
     # <build the xml output.>
@@ -163,7 +162,9 @@ class SqlViewController < ApplicationController
     # fixme: add page load time (Time.now minus request_start_time)
     xml.view(:time => mytime)  {
 
-      xml.expression(expr_string)
+      xml.expression(:expression_id => @expression_id) {
+        expr_string
+      }
 
       # note that we use "<<" rather than "." because
       # from_new_html_string is itself xml that we want to 

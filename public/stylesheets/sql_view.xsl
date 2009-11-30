@@ -86,6 +86,8 @@
 	<div>
 	  <form action="?" method="get">
 	    <xsl:apply-templates select="form_code"/>
+	    <input type="hidden" name="expression_id" value="{ancestor-or-self::view/expression/@expression_id}"/>
+	    <input type="submit"/>
 	  </form>
 	</div>
 
@@ -296,10 +298,41 @@
   </xsl:template>
 
   <xsl:template match="form_code">
-    <xsl:apply-templates/>
+    <table>
+      <tr>
+	<td>SELECT</td>
+	<td>*</td>
+	<td>FROM</td>
+	<td>
+	  <xsl:apply-templates select="ancestor::view/metadata/tables" mode="dropdown">
+	    <xsl:with-param name="form_input_name" select="'expr'"/>
+	    <xsl:with-param name="selected" select="join/expr/text()"/>
+	  </xsl:apply-templates>
+	</td>
+	<td>
+	  <input name="expr_alias" value="{join/expr/@alias}"/>
+	</td>
+      </tr>
+      <tr>
+	<td/>
+	<td colspan="4">
+	  <xsl:apply-templates select="join"/>
+	</td>
+      </tr>
+      <tr>
+	<td/>
+	<td colspan="4" style="text-align:right">
+	  <a href="?">[add another join]</a>
+	</td>
+      </tr>
+
+    </table>
   </xsl:template>
 
-  <xsl:template match="form_code/join">
+  <xsl:template match="expr[ancestor::form_code]">
+  </xsl:template>
+
+  <xsl:template match="join[ancestor::form_code]">
     <div class="form_code_elem">
       <table>
 	<tr>
@@ -308,13 +341,16 @@
 	  </td>
 	  <td>
 	    <xsl:apply-templates select="ancestor::view/metadata/tables" mode="dropdown">
-	      <xsl:with-param name="form_input_name" select="'table'"/>
-	      <xsl:with-param name="selected" select="@selected"/>
+	      <xsl:with-param name="form_input_name" select="@alias"/>
+	      <xsl:with-param name="selected" select="@table"/>
 	    </xsl:apply-templates>
-
 	  </td>
 	  <td>ON</td>
 	  <td>(1 = 1)</td>
+	  <td><a href="?">[delete]</a></td>
+	  <td>
+	    <xsl:apply-templates select="join"/>
+	  </td>
 	</tr>
       </table>
     </div>
